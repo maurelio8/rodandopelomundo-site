@@ -267,18 +267,21 @@ p { margin: 0; max-width: 62ch; }
 .paleta button[aria-pressed="true"] { border-color: var(--tinta); }
 .paleta .nome-cor { width: 100%; font-size: .9rem; color: var(--t70); }
 
-/* Telas do app (prints) */
-.telas { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
-.celular { flex: 0 0 230px; margin: 0; scroll-snap-align: start; }
+/* Telas do app (prints)
+   No computador: grade (4 por linha). No celular: carrossel de lado. */
+.telas { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 18px; align-items: flex-start; }
+.celular { margin: 0; flex: 0 0 calc((100% - 3 * 18px) / 4); }
+@media (max-width: 900px) { .celular { flex-basis: calc((100% - 2 * 18px) / 3); } }
 .celular .moldura {
-  aspect-ratio: 9 / 19.5; border-radius: 34px; border: 6px solid var(--elevado);
-  background: var(--cartao); overflow: hidden;
-  display: grid; place-items: center; text-align: center; padding: 1rem;
-  color: var(--t55); font-size: .9rem;
+  border-radius: 30px; border: 5px solid var(--elevado);
+  background: #000; overflow: hidden;
 }
-.celular .moldura:has(img) { padding: 0; }
-.celular .moldura img { width: 100%; height: 100%; object-fit: cover; }
+.celular .moldura img { width: 100%; height: auto; }
 .celular figcaption { margin-top: .7rem; font-size: .92rem; color: var(--t70); }
+@media (max-width: 760px) {
+  .telas { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; gap: 14px; }
+  .celular { flex: 0 0 68%; scroll-snap-align: start; }
+}
 
 /* Seus dados */
 .dados { background: var(--cartao); border: 1px solid var(--borda); border-radius: 28px; padding: clamp(1.5rem, 4vw, 2.5rem); display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; }
