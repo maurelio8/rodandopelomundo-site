@@ -32,11 +32,18 @@
   <div class="envoltorio pilula">
     <a class="marca" href="#inicio" aria-label="RPM, Rodando Pelo Mundo, início">
       <svg viewBox="0 0 100 100" aria-hidden="true">
-        <path d="M18 74A40 40 0 1 1 82 74" style="fill:none;stroke:var(--borda);stroke-width:9;stroke-linecap:round"/>
-        <path d="M18 74A40 40 0 0 1 72 18" style="fill:none;stroke:var(--acento);stroke-width:9;stroke-linecap:round"/>
-        <path d="M50 54 70 26 54 58z" style="fill:var(--acento)"/>
-        <path d="M50 54 30 82 46 50z" style="fill:var(--tinta)"/>
-        <circle cx="50" cy="54" r="5" style="fill:var(--fundo);stroke:var(--tinta);stroke-width:3"/>
+        <rect width="100" height="100" rx="24" fill="#000"/>
+        <g transform="translate(15 15) scale(.7)">
+          <circle cx="50" cy="50" r="47" fill="none" stroke="#F2F2F2" stroke-width="6"/>
+          <g stroke="#F2F2F2" stroke-width="4.8" stroke-linecap="round">
+            <path d="M50 10v7M90 50h-7M50 90v-7M10 50h7"/>
+          </g>
+          <g transform="rotate(35 50 50)">
+            <path d="M50 21 60 50 40 50z" fill="#E53935"/>
+            <path d="M50 79 60 50 40 50z" fill="#F2F2F2"/>
+          </g>
+          <circle cx="50" cy="50" r="3.5" fill="#0B0B0B"/>
+        </g>
       </svg>
       <span class="sigla">RPM</span>
       <span class="extenso">Rodando Pelo Mundo</span>
@@ -67,23 +74,23 @@
       </div>
 
       <!-- Um pedaço da tela Início do app, com números de exemplo -->
-      <div class="painel" role="img" aria-label="Exemplo do painel do app: 218 km rodados no mês, 36 passeios, 6h30 em movimento, tanque em 94% e dois avisos de manutenção">
+      <div class="painel" role="img" aria-label="Exemplo do painel do app: 350 km rodados no mês, 12 passeios, 9h40 em movimento, tanque em 70% e dois avisos de manutenção">
         <div class="bloco bloco-mes">
           <span class="rotulo">Este mês</span>
-          <div><span class="d numero-gigante" data-alvo="218.0" data-casas="1">218,0</span><span class="unidade">km</span></div>
+          <div><span class="d numero-gigante" data-alvo="350.0" data-casas="1">350,0</span><span class="unidade">km</span></div>
           <div class="barras" aria-hidden="true">
-            <span style="height:55%"></span><span style="height:75%"></span><span style="height:100%"></span><span style="height:70%"></span><span style="height:38%"></span>
+            <span style="height:80%"></span><span style="height:45%"></span><span style="height:100%"></span><span style="height:60%"></span><span style="height:30%"></span>
           </div>
           <small class="t70">km por semana</small>
         </div>
         <div class="bloco mini">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>
-          <span class="d" data-alvo="36">36</span>
+          <span class="d" data-alvo="12">12</span>
           <small>passeios</small>
         </div>
         <div class="bloco mini">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <span class="d">6h30</span>
+          <span class="d">9h40</span>
           <small>em movimento</small>
         </div>
 
@@ -99,17 +106,17 @@
           <div class="moto-medidas">
             <div class="odo">
               <span class="rotulo">ODO</span>
-              <div class="d"><span data-alvo="4262.3" data-casas="1">4.262,3</span><span class="unidade">km</span></div>
+              <div class="d"><span data-alvo="12500.0" data-casas="1">12.500,0</span><span class="unidade">km</span></div>
             </div>
-            <div class="contagiro" style="--falta:6">
+            <div class="contagiro" style="--falta:30">
               <svg viewBox="0 0 100 100" aria-hidden="true">
                 <path class="trilho" d="M21.7 78.3A40 40 0 1 1 78.3 78.3" fill="none" stroke-width="10" stroke-linecap="round"/>
                 <path class="ponteiro" d="M21.7 78.3A40 40 0 1 1 78.3 78.3" fill="none" stroke-width="10" stroke-linecap="round" pathLength="100" style="stroke:var(--em-dia)"/>
               </svg>
-              <span class="d centro">94%</span>
+              <span class="d centro">70%</span>
             </div>
             <div>
-              <div class="d" style="font-size:1.6rem;font-weight:700">~395<span class="unidade" style="font-size:.95rem">km</span></div>
+              <div class="d" style="font-size:1.6rem;font-weight:700">~280<span class="unidade" style="font-size:.95rem">km</span></div>
               <small class="t70">autonomia</small>
             </div>
           </div>
@@ -118,11 +125,11 @@
         <div class="bloco luzes">
           <div class="luz">
             <span class="espia ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h11l5-4 2 1-6 7H5a2 2 0 0 1-2-2z"/><path d="M8 15v-3h4v3M5 9l2 2"/></svg></span>
-            <div><strong>Verificar nível do óleo</strong><small>Faltam 64 km</small></div>
+            <div><strong>Verificar nível do óleo</strong><small>Faltam 150 km</small></div>
           </div>
           <div class="luz">
             <span class="espia azul"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg></span>
-            <div><strong>Calibrar pneus</strong><small>Calibrados há 210 km</small></div>
+            <div><strong>Calibrar pneus</strong><small>Calibrados há 300 km</small></div>
           </div>
         </div>
         <p class="legenda">Painel da tela Início, com números de exemplo.</p>
@@ -178,15 +185,15 @@
           <h3>Sua garagem</h3>
           <p>Uma ou várias motos, cada uma com tanque, consumo real e custo por km.</p>
           <div class="moto-medidas" aria-hidden="true" style="margin-top:6px">
-            <div class="contagiro" style="--falta:28;width:96px;height:96px">
+            <div class="contagiro" style="--falta:30;width:96px;height:96px">
               <svg viewBox="0 0 100 100">
                 <path class="trilho" d="M21.7 78.3A40 40 0 1 1 78.3 78.3" fill="none" stroke-width="10" stroke-linecap="round"/>
                 <path class="ponteiro" d="M21.7 78.3A40 40 0 1 1 78.3 78.3" fill="none" stroke-width="10" stroke-linecap="round" pathLength="100" style="stroke:var(--em-dia)"/>
               </svg>
-              <span class="d centro">72%</span>
+              <span class="d centro">70%</span>
             </div>
             <div>
-              <div class="d" style="font-size:1.8rem;font-weight:700">~310<span class="unidade" style="font-size:1rem">km</span></div>
+              <div class="d" style="font-size:1.8rem;font-weight:700">~280<span class="unidade" style="font-size:1rem">km</span></div>
               <small class="t70">de autonomia no tanque</small>
             </div>
           </div>
