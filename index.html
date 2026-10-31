@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rodando Pelo Mundo (RPM) — app para quem anda de moto</title>
+  <meta name="description" content="Grave seus passeios de moto, acompanhe consumo, manutenção e documentos, receba alertas de segurança e encontre eventos. Feito por quem anda de moto.">
+  <link rel="canonical" href="https://rodandopelomundo.com.br/">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15171a">
+
+  <!-- Prévia ao compartilhar o link (WhatsApp, Instagram etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rodando Pelo Mundo (RPM)">
+  <meta property="og:description" content="Cada estrada vira história. O app para gravar e cuidar dos seus passeios de moto.">
+  <meta property="og:url" content="https://rodandopelomundo.com.br/">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header class="topo">
+  <div class="envoltorio">
+    <a class="marca" href="#inicio">
+      <img src="assets/img/logo.svg" alt="" width="34" height="34">
+      Rodando Pelo Mundo
+    </a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#telas">Telas</a>
+      <a href="#seus-dados">Seus dados</a>
+      <a href="#perguntas">Perguntas</a>
+      <a class="botao" href="#baixar">Baixar</a>
+    </nav>
+    <details class="menu-celular">
+      <summary aria-label="Abrir menu">Menu</summary>
+      <nav aria-label="Seções">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#telas">Telas</a>
+        <a href="#seus-dados">Seus dados</a>
+        <a href="#perguntas">Perguntas</a>
+        <a href="#baixar">Baixar</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ===================== ABERTURA ===================== -->
+  <section class="abertura">
+    <!-- Rota desenhada com as cores de velocidade do app (azul = devagar, vermelho = rápido) -->
+    <div class="rota" aria-hidden="true">
+      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMaxYMid slice">
+        <defs>
+          <linearGradient id="velocidade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2f80ed"/>
+            <stop offset=".45" stop-color="#2f80ed"/>
+            <stop offset=".7" stop-color="#9b51e0"/>
+            <stop offset="1" stop-color="#e2231a"/>
+          </linearGradient>
+        </defs>
+        <path class="trajeto" d="M560 560 C 620 470, 700 520, 740 430 S 700 300, 800 280 S 960 330, 990 240 S 920 120, 1040 90 S 1150 120, 1120 60"
+              fill="none" stroke="url(#velocidade)" stroke-width="6" stroke-linecap="round"/>
+        <!-- Pontos marcados no caminho -->
+        <g class="pino pino-1"><circle cx="740" cy="430" r="9" fill="#15171a" stroke="#eceae4" stroke-width="3"/></g>
+        <g class="pino pino-2"><circle cx="990" cy="240" r="9" fill="#15171a" stroke="#eceae4" stroke-width="3"/></g>
+        <!-- Bússola na chegada -->
+        <g class="chegada" transform="translate(1120 60)">
+          <circle r="22" fill="#000" stroke="#eceae4" stroke-width="3"/>
+          <g transform="rotate(38)">
+            <polygon points="0,-16 5,0 -5,0" fill="#e2231a"/>
+            <polygon points="0,16 5,0 -5,0" fill="#6b7178"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="envoltorio">
+      <div class="conteudo">
+        <p class="sigla">RPM</p>
+        <h1>Cada estrada vira história.</h1>
+        <p class="linha-fina">Rodando Pelo Mundo grava seus passeios de moto, cuida da manutenção e dos documentos e avisa o que importa antes e durante a viagem. Feito por quem anda de moto.</p>
+        <div class="acoes">
+          <a class="botao" href="#baixar">Quero usar</a>
+          <a class="botao vazado" href="#funcionalidades">Ver o que ele faz</a>
+        </div>
+        <div class="legenda-vel" aria-hidden="true">
+          <span>mais devagar</span><span class="barra"></span><span>mais rápido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa-estrada" role="presentation"></div>
+
+  <!-- ===================== POR QUE ===================== -->
+  <section class="secao">
+    <div class="envoltorio"><div class="intro">
+      <h2>Feito por quem roda</h2>
+      <p>O Google Maps leva você até um lugar. Mas quem anda de moto muitas vezes sai sem destino, e quer guardar o caminho, saber quanto rodou, quanto gastou e quando vence a próxima revisão. O RPM junta tudo isso num app só, pensado para usar com luva, no sol e com a moto parada no acostamento.</p>
+    </div></div>
+  </section>
+
+  <!-- ===================== FUNCIONALIDADES ===================== -->
+  <section class="secao" id="funcionalidades" style="padding-top:0">
+    <div class="envoltorio">
+      <div class="intro">
+        <h2>O que o RPM faz</h2>
+        <p class="suave">Do primeiro quilômetro ao café no mirante.</p>
+      </div>
+
+      <div class="diario">
+
+        <article class="trecho">
+          <div class="icone"><svg viewBox="0 0 24 24"><path d="M4 19c3-1 3-6 7-7s5-5 9-7"/><circle cx="4" cy="19" r="1.6"/><circle cx="20" cy="5" r="1.6"/></svg></div>
+          <div>
+            <h3>Grave seus passeios</h3>
+            <p class="suave">Saia rodando: o app percebe que você começou e terminou o passeio.</p>
+            <ul>
+              <li>Início e fim automáticos, ou pelo botão</li>
+              <li>Mapa ao vivo que gira com a direção da moto</li>
+              <li>Distância, tempo e velocidade na tela bloqueada</li>
+              <li>Marque um ponto com um toque, sem parar</li>
+              <li>Rota colorida pela velocidade e gráfico de altimetria</li>
+              <li>Exportação em GPX</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="trecho">
+          <div class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13.5 13.5 8.5 15.5 10.5 10.5z"/></svg></div>
+          <div>
+            <h3>Navegue e explore</h3>
+            <p class="suave">Trace a rota dentro do app e grave o passeio junto.</p>
+            <ul>
+              <li>Navegação por voz até o destino</li>
+              <li>Postos, pedágios, mirantes e oficinas de moto no mapa</li>
+              <li>Estacionamentos de moto e lombadas mapeadas</li>
+              <li>"Onde deixei a moto?" com a distância até ela</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="trecho">
+          <div class="icone"><svg viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16h5l3-6h3M9 10h4"/></svg></div>
+          <div>
+            <h3>Sua garagem</h3>
+            <p class="suave">Uma ou várias motos, cada uma com seu histórico.</p>
+            <ul>
+              <li>Catálogo com as marcas e modelos da tabela FIPE</li>
+              <li>Abastecimentos, consumo real e autonomia em km</li>
+              <li>Nível do tanque e alerta para achar posto a tempo</li>
+              <li>Custo por km e por mês, com IPVA e seguro</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="trecho">
+          <div class="icone"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L4 17l3 3 5.2-5.2a4 4 0 0 0 5.3-5.3l-2.4 2.4-2.6-.6-.6-2.6z"/></svg></div>
+          <div>
+            <h3>Manutenção e documentos</h3>
+            <p class="suave">O app lembra para você não esquecer.</p>
+            <ul>
+              <li>Revisões e itens por km ou por tempo</li>
+              <li>Pneus com vida útil e idade pelo DOT</li>
+              <li>Vencimento de IPVA, licenciamento, seguro e CNH</li>
+              <li>Checkup antes de pegar a estrada</li>
+              <li>Suas oficinas de confiança no mapa</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="trecho">
+          <div class="icone"><svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div>
+            <h3>Segurança</h3>
+            <p class="suave">Para você voltar para casa.</p>
+            <ul>
+              <li>Detecção de queda com alerta para seu contato de emergência</li>
+              <li>Ficha de segurança, como tipo sanguíneo</li>
+              <li>Lembrete de pausa depois de horas rodando</li>
+              <li>Previsão de chuva e rajadas de vento antes de sair</li>
+            </ul>
+            <p class="nota">A detecção de queda não substitui os serviços de emergência. Em caso de acidente, ligue 192 (SAMU) ou 193 (Bombeiros).</p>
+          </div>
+        </article>
+
+        <article class="trecho">
+          <div class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-2.5 5 2.5-1.5-8"/></svg></div>
+          <div>
+            <h3>Eventos e conquistas</h3>
+            <p class="suave">Porque moto também é encontro.</p>
+            <ul>
+              <li>Agenda de eventos de moto perto de você</li>
+              <li>Medalhas de Bronze a Lenda por km, passeios e cuidados</li>
+              <li>Imagem do passeio pronta para as redes sociais</li>
+              <li>Zona de privacidade que esconde onde você mora</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa-estrada" role="presentation"></div>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="secao">
+    <div class="envoltorio">
+      <h2 class="intro">Como funciona</h2>
+      <ol class="passos">
+        <li>
+          <h3>Cadastre sua moto</h3>
+          <p class="suave">Escolha marca, modelo e ano no catálogo e informe o tanque.</p>
+        </li>
+        <li>
+          <h3>Saia rodando</h3>
+          <p class="suave">O RPM começa a gravar sozinho quando percebe a moto em movimento.</p>
+        </li>
+        <li>
+          <h3>Veja seu passeio</h3>
+          <p class="suave">Mapa, velocidades, altimetria, consumo e bateria usada, tudo no resumo.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="faixa-estrada" role="presentation"></div>
+
+  <!-- ===================== TELAS ===================== -->
+  <!-- Para trocar um quadro pelo print: coloque a imagem em assets/img/telas/
+       e substitua o texto da moldura por:
+       <img src="assets/img/telas/inicio.png" alt="Tela Início do app" loading="lazy"> -->
+  <section class="secao" id="telas">
+    <div class="envoltorio">
+      <div class="intro">
+        <h2>Por dentro do app</h2>
+      </div>
+      <div class="telas">
+        <figure class="celular"><div class="moldura">Print da tela Início</div><p>Início: seu mês, eventos e a moto</p></figure>
+        <figure class="celular"><div class="moldura">Print da gravação</div><p>Gravação com mapa ao vivo</p></figure>
+        <figure class="celular"><div class="moldura">Print do Resumo</div><p>Resumo com cores de velocidade</p></figure>
+        <figure class="celular"><div class="moldura">Print da Garagem</div><p>Garagem com tanque e manutenção</p></figure>
+        <figure class="celular"><div class="moldura">Print das Conquistas</div><p>Conquistas de Bronze a Lenda</p></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa-estrada" role="presentation"></div>
+
+  <!-- ===================== SEUS DADOS ===================== -->
+  <section class="secao" id="seus-dados">
+    <div class="envoltorio">
+      <div class="privacidade-destaque">
+        <h2>Seus passeios são seus</h2>
+        <ul>
+          <li>Funciona sem criar conta. Os dados ficam no seu celular.</li>
+          <li>Backup manual com senha, para guardar onde quiser.</li>
+          <li>Se quiser, entre com o Google e o backup vai para o seu próprio Google Drive.</li>
+          <li>Não vendemos seus dados e não mostramos anúncios.</li>
+        </ul>
+        <a class="botao vazado" href="privacidade.html">Ler a política de privacidade</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PERGUNTAS ===================== -->
+  <section class="secao perguntas" id="perguntas" style="padding-top:0">
+    <div class="envoltorio">
+      <h2 class="intro">Perguntas frequentes</h2>
+
+      <details>
+        <summary>O app é gratuito?</summary>
+        <p>Sim, o RPM será gratuito para baixar. Novidades sobre planos serão avisadas aqui.</p>
+      </details>
+      <details>
+        <summary>Gasta muita bateria?</summary>
+        <p>A gravação usa GPS, que consome bateria. Por isso o próprio app mostra quanto de bateria cada passeio usou. Em viagens longas, o ideal é usar o celular no carregador da moto.</p>
+      </details>
+      <details>
+        <summary>Funciona sem internet?</summary>
+        <p>A gravação do passeio funciona sem internet. Mapa, navegação, previsão do tempo e locais próximos precisam de conexão.</p>
+      </details>
+      <details>
+        <summary>Preciso mexer no celular enquanto piloto?</summary>
+        <p>Não, e não deve. O passeio começa e termina sozinho, e funções como pesquisar um destino só abrem com a moto parada.</p>
+      </details>
+      <details>
+        <summary>Tem para iPhone?</summary>
+        <p>O RPM chega primeiro ao Android. A versão para iPhone está nos planos.</p>
+      </details>
+      <details>
+        <summary>Como apago minha conta e meus dados?</summary>
+        <p>Pelo próprio app, em Configurações, ou seguindo os passos da página <a href="excluir-conta.html">Excluir conta e dados</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="faixa-estrada" role="presentation"></div>
+
+  <!-- ===================== BAIXAR ===================== -->
+  <section class="secao baixar" id="baixar">
+    <div class="envoltorio">
+      <h2>Em breve nas lojas</h2>
+      <p class="suave">O app está em fase final de testes na estrada.</p>
+      <!-- Quando o app for publicado, troque cada bloco pelo selo oficial da loja com o link -->
+      <div class="lojas">
+        <div class="loja"><strong>Google Play</strong><span>Em breve</span></div>
+        <div class="loja"><strong>App Store</strong><span>Depois do Android</span></div>
+      </div>
+      <a class="botao" href="mailto:contato@rodandopelomundo.com.br?subject=Quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20RPM">Me avise no lançamento</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="envoltorio">
+    <div>
+      <strong>Rodando Pelo Mundo</strong><br>
+      <a href="mailto:contato@rodandopelomundo.com.br">contato@rodandopelomundo.com.br</a><br>
+      © 2026 Rodando Pelo Mundo
+    </div>
+    <nav aria-label="Documentos">
+      <a href="privacidade.html">Política de privacidade</a>
+      <a href="termos.html">Termos de uso</a>
+      <a href="excluir-conta.html">Excluir conta e dados</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
