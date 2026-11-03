@@ -318,6 +318,9 @@ p { margin: 0; max-width: 62ch; }
 .rodape nav { display: flex; flex-wrap: wrap; gap: 1.2rem; }
 .rodape a { color: var(--t70); }
 .rodape a:hover { color: var(--tinta); }
+/* Instagram do app: ícone e @ na mesma linha, numa linha própria do rodapé */
+.rodape .rede { display: flex; align-items: center; gap: .45rem; width: fit-content; margin: .15rem 0; }
+.rodape .rede svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ---------- 8. Barra inferior do celular (igual à do app) ---------- */
 .barra-celular { display: none; }
