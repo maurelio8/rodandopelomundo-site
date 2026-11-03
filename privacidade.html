@@ -43,7 +43,7 @@
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 31 de outubro de 2026</p>
+    <p class="atualizado">Última atualização: 3 de novembro de 2026</p>
 
     <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
 
@@ -65,21 +65,22 @@
       <li>Leituras do acelerômetro durante os passeios, usadas na detecção de queda.</li>
       <li>Eventos marcados como "Quero ir", oficinas salvas e suas preferências do app.</li>
     </ul>
+    <p>Ao trocar de celular pelo assistente do Android que copia apps e dados, por cabo ou Wi-Fi, o banco de dados do app (seus passeios, motos e registros) vai junto, direto do aparelho antigo para o novo. Isso vale do Android 12 em diante; nas versões anteriores, os dados do app não são copiados. No celular novo, você entra de novo na conta Google, se usar, e permite de novo as permissões. O backup automático do próprio Android na nuvem fica desligado para o app: seus dados só vão para a nuvem pelo backup online do RPM, se você entrar com o Google (seção 4).</p>
 
     <h2>3. Permissões do celular e por que pedimos</h2>
     <div class="tabela">
       <table>
         <thead><tr><th>Permissão</th><th>Para quê</th></tr></thead>
         <tbody>
-          <tr><td>Localização, inclusive em segundo plano</td><td>Gravar o passeio com a tela bloqueada, iniciar e encerrar passeios automaticamente, mostrar o mapa, a previsão do tempo e locais próximos, e informar sua posição no alerta de queda.</td></tr>
+          <tr><td>Localização, só durante o uso do app</td><td>Gravar o passeio e medir distância, velocidade e altimetria, mostrar o mapa, a previsão do tempo e locais próximos, iniciar e encerrar passeios sozinho (se você ligar essa opção) e informar sua posição no alerta de queda. Com a tela apagada, a localização continua só enquanto a gravação ou o início automático estão ligados, por um serviço que o Android mostra como notificação do RPM. O app nunca pede a localização "o tempo todo".</td></tr>
           <tr><td>Atividade física</td><td>Perceber quando você está em um veículo, para o início e o fim automáticos.</td></tr>
           <tr><td>Notificações</td><td>Mostrar a gravação ao vivo e lembrar de manutenções, documentos, eventos e pausas.</td></tr>
           <tr><td>SMS</td><td>Enviar o alerta de queda ao seu contato de emergência, somente se uma queda for detectada e você não cancelar a contagem.</td></tr>
-          <tr><td>Fotos e câmera</td><td>Escolher a foto de perfil e a foto de fundo da imagem de compartilhar.</td></tr>
-          <tr><td>Agenda</td><td>Adicionar um evento de moto à sua agenda, quando você pedir.</td></tr>
+          <tr><td>Armazenamento, só no Android 10 ou anterior</td><td>Salvar a imagem do passeio na galeria, quando você pedir. Do Android 11 em diante, salvar a imagem não pede permissão.</td></tr>
         </tbody>
       </table>
     </div>
+    <p>Escolher uma foto (de perfil ou de fundo da imagem de compartilhar) e adicionar um evento de moto à sua agenda não pedem permissão: o app abre o seletor de fotos e a tela de novo evento do próprio Android. O RPM recebe só a foto que você escolher, não usa a câmera e não lê sua galeria nem sua agenda.</p>
     <p>Você pode negar ou retirar qualquer permissão nas configurações do celular. A função que depende dela deixa de funcionar, e o restante do app continua.</p>
 
     <h2>4. Conta Google e backup online (opcional)</h2>
@@ -88,14 +89,16 @@
     <h2>5. Serviços de terceiros</h2>
     <p>Algumas funções enviam dados a serviços externos, apenas o necessário para responder ao pedido:</p>
     <ul>
-      <li>Google Maps, Navigation, Places e Weather: localização ou área do mapa, para mostrar mapas, rotas, locais próximos e previsão do tempo.</li>
-      <li>OpenStreetMap: a área do mapa que você está vendo, para mostrar postos, pedágios, mirantes, oficinas e lombadas.</li>
-      <li>Google Firebase e Google Drive: login e backup, se você usar a conta.</li>
+      <li>Google Maps Platform (mapas, rotas, navegação e locais próximos): recebe sua posição para mostrar o mapa, traçar e guiar a rota e buscar os lugares.</li>
+      <li>Google Weather (previsão do tempo): recebe só a posição arredondada, com precisão de cerca de 1 km, sem nenhum outro dado.</li>
+      <li>OpenStreetMap (camadas para motociclistas, como pedágios, postos, oficinas e lombadas): recebe só a região do mapa que está na tela, não a sua posição exata.</li>
+      <li>Sua operadora de celular: entrega o SMS do alerta de queda ao seu contato de emergência (seção 6).</li>
+      <li>Google Firebase e Google Drive: login e backup online, se você entrar com o Google (seção 4).</li>
     </ul>
     <p>Cada um desses serviços tem sua própria política de privacidade, como a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a>.</p>
 
     <h2>6. Alerta de queda</h2>
-    <p>Durante um passeio gravado, o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com sua localização e as informações da ficha de segurança que você preencheu. A cobrança do SMS segue o plano da sua operadora. Essa função é um apoio e não substitui os serviços de emergência.</p>
+    <p>Durante um passeio gravado, o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com seu nome, a hora, o link da sua localização e, se você ligar essa opção, os dados da ficha de segurança. A cobrança do SMS segue o plano da sua operadora. Essa função é um apoio e não substitui os serviços de emergência.</p>
 
     <h2>7. Compartilhamento nas redes</h2>
     <p>A imagem de um passeio só sai do app quando você toca em compartilhar. A zona de privacidade esconde o início e o fim do trajeto, para não mostrar onde você mora ou trabalha.</p>
