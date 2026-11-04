@@ -54,15 +54,18 @@
   </div>
 </header>
 
-<!-- RASCUNHO: conferir com o texto da política que já está dentro do app
-     e manter os dois iguais antes de publicar na Play Store. -->
+<!-- Conferida em 04/11 com os textos do app: os porquês da tabela da seção 3
+     são os de lib/telas/textos_permissoes.dart, e os serviços da seção 5 são
+     os do "Seus dados" (lib/telas/tela_sobre.dart). Ao mudar um, mudar o
+     outro. O Crashlytics e a lista de espera do iPhone entram aqui pelos cards
+     deles (Crashlytics e Lista de espera do iPhone no site). -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 3 de novembro de 2026</p>
+    <p class="atualizado">Última atualização: 4 de novembro de 2026</p>
 
     <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
-    <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 12.</p>
+    <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 13.</p>
 
     <h2>1. O resumo</h2>
     <ul>
@@ -80,6 +83,7 @@
       <li>Seu nome e foto de perfil, se você informar.</li>
       <li>Ficha de segurança e contato de emergência, se você preencher.</li>
       <li>Leituras do acelerômetro durante os passeios, usadas na detecção de queda.</li>
+      <li>Um registro técnico do início e do fim automáticos, com horários, velocidades e distâncias, sem a sua posição, usado para corrigir falhas. Ele fica só no celular, fora do backup e da cópia entre aparelhos, e só sai dele se você mesmo enviar.</li>
       <li>Eventos marcados como "Quero ir", oficinas salvas e suas preferências do app.</li>
     </ul>
     <p>Ao trocar de celular pelo assistente do Android que copia apps e dados, por cabo ou Wi-Fi, o banco de dados do app (seus passeios, motos e registros) vai junto, direto do aparelho antigo para o novo. Isso vale do Android 12 em diante; nas versões anteriores, os dados do app não são copiados. No celular novo, você entra de novo na conta Google, se usar, e permite de novo as permissões. O backup automático do próprio Android na nuvem fica desligado para o app: seus dados só vão para a nuvem pelo backup online do RPM, se você entrar com o Google (seção 4).</p>
@@ -89,15 +93,18 @@
       <table>
         <thead><tr><th>Permissão</th><th>Para quê</th></tr></thead>
         <tbody>
-          <tr><td>Localização, só durante o uso do app</td><td>Gravar o passeio e medir distância, velocidade e altimetria, mostrar o mapa, a previsão do tempo e locais próximos, iniciar e encerrar passeios sozinho (se você ligar essa opção) e informar sua posição no alerta de queda. Com a tela apagada, a localização continua só enquanto a gravação ou o início automático estão ligados, por um serviço que o Android mostra como notificação do RPM. O app nunca pede a localização "o tempo todo".</td></tr>
-          <tr><td>Atividade física</td><td>Perceber quando você está em um veículo, para o início e o fim automáticos.</td></tr>
-          <tr><td>Notificações</td><td>Mostrar a gravação ao vivo e lembrar de manutenções, documentos, eventos e pausas.</td></tr>
-          <tr><td>SMS</td><td>Enviar o alerta de queda ao seu contato de emergência, somente se uma queda for detectada e você não cancelar a contagem.</td></tr>
+          <tr><td>Localização, só durante o uso do app</td><td>Gravar a rota dos seus passeios, medir distância, velocidade e altimetria, mostrar o mapa onde você está, a previsão do tempo e locais próximos, e informar sua posição no alerta de queda. Com a tela apagada, o RPM só usa a localização enquanto grava um passeio ou, se você ligar o início automático, enquanto espera você sair com a moto (seção 7). Nesses casos, o Android mostra uma notificação do RPM. O app nunca pede a localização "o tempo todo".</td></tr>
+          <tr><td>Notificações</td><td>Mostrar o passeio em andamento com a tela bloqueada e avisar de revisão, documentos vencendo, tanque na reserva e chuva antes dos eventos. Nada de propaganda.</td></tr>
+          <tr><td>Atividade física</td><td>Só para o início automático, se você ligar a opção: o celular percebe quando você entra num veículo, e o passeio começa sozinho. Também ajuda o fim automático a perceber quando você para. É pedida só quando você liga o início automático. Sem ela, os passeios iniciados pelo botão ▶︎ funcionam normalmente.</td></tr>
+          <tr><td>Bateria sem restrição</td><td>Alguns celulares fecham apps em segundo plano para economizar bateria, e isso pode cortar a gravação no meio do passeio. Liberando nos ajustes do Android, o RPM continua gravando com a tela bloqueada.</td></tr>
+          <tr><td>SMS</td><td>Para o alerta de queda mandar sua localização ao contato de emergência, mesmo sem internet, somente se uma queda for detectada e você não cancelar a contagem. É pedida só quando você liga o alerta de queda.</td></tr>
+          <tr><td>Alarme em tela cheia</td><td>Para o alarme do alerta de queda acender a tela e aparecer por cima do bloqueio, com o botão "Estou bem" grande. Só é usada pelo alerta de queda.</td></tr>
           <tr><td>Armazenamento, só no Android 10 ou anterior</td><td>Salvar a imagem do passeio na galeria, quando você pedir. Do Android 11 em diante, salvar a imagem não pede permissão.</td></tr>
         </tbody>
       </table>
     </div>
     <p>Escolher uma foto (de perfil ou de fundo da imagem de compartilhar) e adicionar um evento de moto à sua agenda não pedem permissão: o app abre o seletor de fotos e a tela de novo evento do próprio Android. O RPM recebe só a foto que você escolher, não usa a câmera e não lê sua galeria nem sua agenda.</p>
+    <p>Além das permissões da tabela, o Android libera na instalação, sem perguntar, algumas permissões técnicas declaradas pelo RPM e pelos pacotes que ele usa (como os do Google para mapas, navegação e login): acesso à internet e ao estado da rede e do Wi-Fi, manter o celular acordado durante a gravação e algumas de Bluetooth e biometria que vêm desses pacotes. O RPM não as usa para coletar nenhum dado além dos descritos nesta política.</p>
     <p>Você pode negar ou retirar qualquer permissão nas configurações do celular. A função que depende dela deixa de funcionar, e o restante do app continua.</p>
 
     <h2>4. Conta Google e backup online (opcional)</h2>
@@ -115,26 +122,31 @@
     <p>Cada um desses serviços tem sua própria política de privacidade, como a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a>.</p>
 
     <h2>6. Alerta de queda</h2>
-    <p>Durante um passeio gravado, o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com seu nome, a hora, o link da sua localização e, se você ligar essa opção, os dados da ficha de segurança. A cobrança do SMS segue o plano da sua operadora. Essa função é um apoio e não substitui os serviços de emergência.</p>
+    <p>Se você ligar o alerta de queda, durante um passeio gravado o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com seu nome, a hora, o link da sua localização e, se você ligar essa opção, os dados da ficha de segurança. A cobrança do SMS segue o plano da sua operadora. Quando o SMS não pode sair sozinho (sem a permissão, por exemplo), nenhuma mensagem é enviada: o app mostra uma tela com botões para ligar para o contato, mandar a mensagem já escrita ou ligar para o SAMU (192). Essa função é um apoio e não substitui os serviços de emergência.</p>
 
-    <h2>7. Compartilhamento nas redes</h2>
+    <h2>7. Início e fim automáticos</h2>
+    <p>O fim automático vem ligado e vale para todos os passeios, inclusive os que você inicia pelo botão ▶︎: com a moto parada pelo tempo escolhido, o passeio é encerrado. Para isso, ele usa só o GPS da própria gravação, o carregador da moto e, se você tiver permitido a Atividade física, o aviso do Android de que a viagem terminou. Fora de um passeio, ele não observa nada.</p>
+    <p>O início automático é opcional e vem desligado. Se você ligar, o RPM fica atento ao carregador e ao aviso do Android de que você entrou num veículo, e só depois de um desses sinais liga o GPS por alguns minutos para conferir se você saiu com a moto. Enquanto a opção está ligada, o Android mostra uma notificação discreta do RPM. A permissão de Atividade física só é pedida quando você liga essa opção. Como o Android não diferencia moto de carro ou ônibus, um trajeto de carro pode virar passeio, e é só apagar. Por enquanto, o início automático existe só no Android.</p>
+    <p>Esses sinais são usados só no celular e não são enviados a ninguém. Você pode ligar ou desligar cada opção quando quiser, em Perfil › ⚙ › Passeios.</p>
+
+    <h2>8. Compartilhamento nas redes</h2>
     <p>A imagem de um passeio só sai do app quando você toca em compartilhar. A zona de privacidade esconde o início e o fim do trajeto, para não mostrar onde você mora ou trabalha.</p>
 
-    <h2>8. Por quanto tempo guardamos</h2>
+    <h2>9. Por quanto tempo guardamos</h2>
     <p>Os dados ficam no seu celular até você apagá-los ou desinstalar o app. O backup online fica no seu Google Drive até você excluir a conta no app ou apagar os dados do app no Drive.</p>
 
-    <h2>9. Seus direitos</h2>
+    <h2>10. Seus direitos</h2>
     <p>Pela LGPD, você pode confirmar quais dados existem, acessá-los, corrigi-los, levá-los para outro serviço e pedir que sejam apagados. A maior parte disso você faz no próprio app. Para qualquer pedido, escreva para o e-mail abaixo.</p>
     <p>Se o seu pedido não for atendido, você também pode reclamar à <a href="https://www.gov.br/anpd/pt-br" rel="noopener">Autoridade Nacional de Proteção de Dados (ANPD)</a>.</p>
     <p>Veja como <a href="excluir-conta.html">excluir sua conta e seus dados</a>.</p>
 
-    <h2>10. Idade mínima</h2>
+    <h2>11. Idade mínima</h2>
     <p>O app é destinado a maiores de 18 anos.</p>
 
-    <h2>11. Mudanças nesta política</h2>
+    <h2>12. Mudanças nesta política</h2>
     <p>Quando esta política mudar, a data no topo será atualizada e, se a mudança for importante, avisaremos no app.</p>
 
-    <h2>12. Responsável e contato</h2>
+    <h2>13. Responsável e contato</h2>
     <p>Controlador: Marcos Aurélio Luiz de Oliveira, pessoa física, desenvolvedor do Rodando Pelo Mundo.<br>Canal para assuntos de dados pessoais: <a href="mailto:approdandopelomundo@gmail.com">approdandopelomundo@gmail.com</a></p>
     <p>Como agente de tratamento de pequeno porte (Resolução CD/ANPD nº 2/2022), o RPM não tem um encarregado (DPO) indicado. Os pedidos sobre os seus dados são respondidos pelo próprio controlador, por esse e-mail, em até 15 dias.</p>
   </div></div>
