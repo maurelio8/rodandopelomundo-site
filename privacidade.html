@@ -54,11 +54,18 @@
   </div>
 </header>
 
-<!-- Conferida em 04/11 com os textos do app: os porquês da tabela da seção 3
-     são os de lib/telas/textos_permissoes.dart, e os serviços da seção 5 são
-     os do "Seus dados" (lib/telas/tela_sobre.dart). Ao mudar um, mudar o
-     outro. O Crashlytics e a lista de espera do iPhone entram aqui pelos cards
-     deles (Crashlytics e Lista de espera do iPhone no site). -->
+<!-- Conferida em 04/11 com os textos do app e com o Mapa de dados: os
+     porquês da tabela da seção 3 são os de lib/telas/textos_permissoes.dart,
+     e o "Seus dados" da tela Sobre (lib/telas/tela_sobre.dart) repete as
+     frases das seções 4 (backup, em textoSobreConta), 5 (serviços, em
+     itensSobreDados) e 8 (GPX e CSV, em textoSobreDados). Ao mudar um, mudar
+     o outro. As camadas da seção 5 vêm de dois servidores públicos do
+     Overpass (overpass-api.de e overpass.private.coffee); com o card "Ler os
+     arquivos no app no lugar do Overpass", o GitHub Pages entra no lugar
+     deles. A reserva do Google Agenda na web (seção 3) é do Android: no
+     iPhone, o Calendário da Apple sempre existe. O Crashlytics e a lista de
+     espera do iPhone entram aqui pelos cards deles (Crashlytics e Lista de
+     espera do iPhone no site). -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
@@ -81,7 +88,7 @@
       <li>Pontos marcados durante os passeios, com nome e nota que você escrever.</li>
       <li>Motos cadastradas, abastecimentos, hodômetro, manutenções, pneus, custos e datas de vencimento de documentos (IPVA, licenciamento, seguro e CNH).</li>
       <li>Seu nome e foto de perfil, se você informar.</li>
-      <li>Ficha de segurança e contato de emergência, se você preencher.</li>
+      <li>Ficha de segurança e contato de emergência, se você preencher. A ficha pode ter dados de saúde, como o tipo sanguíneo, que a LGPD trata como sensíveis: ela é opcional, é usada no alerta de queda e você pode apagá-la quando quiser.</li>
       <li>Leituras do acelerômetro durante os passeios, usadas na detecção de queda.</li>
       <li>Um registro técnico do início e do fim automáticos, com horários, velocidades e distâncias, sem a sua posição, usado para corrigir falhas. Ele fica só no celular, fora do backup e da cópia entre aparelhos, e só sai dele se você mesmo enviar.</li>
       <li>Eventos marcados como "Quero ir", oficinas salvas e suas preferências do app.</li>
@@ -103,19 +110,19 @@
         </tbody>
       </table>
     </div>
-    <p>Escolher uma foto (de perfil ou de fundo da imagem de compartilhar) e adicionar um evento de moto à sua agenda não pedem permissão: o app abre o seletor de fotos e a tela de novo evento do próprio Android. O RPM recebe só a foto que você escolher, não usa a câmera e não lê sua galeria nem sua agenda.</p>
+    <p>Escolher uma foto (de perfil ou de fundo da imagem de compartilhar) e adicionar um evento de moto à sua agenda não pedem permissão: o app abre o seletor de fotos e a tela de novo evento do próprio Android. Se o celular não tiver um app de agenda, o RPM abre o Google Agenda no navegador, já com os dados do evento, para você salvar por lá. O RPM recebe só a foto que você escolher, não usa a câmera e não lê sua galeria nem sua agenda.</p>
     <p>Além das permissões da tabela, o Android libera na instalação, sem perguntar, algumas permissões técnicas declaradas pelo RPM e pelos pacotes que ele usa (como os do Google para mapas, navegação e login): acesso à internet e ao estado da rede e do Wi-Fi, manter o celular acordado durante a gravação e algumas de Bluetooth e biometria que vêm desses pacotes. O RPM não as usa para coletar nenhum dado além dos descritos nesta política.</p>
     <p>Você pode negar ou retirar qualquer permissão nas configurações do celular. A função que depende dela deixa de funcionar, e o restante do app continua.</p>
 
     <h2>4. Conta Google e backup online (opcional)</h2>
-    <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
+    <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Ele leva uma cópia de todos os dados da seção 2, inclusive os trajetos dos passeios, a ficha de segurança e o contato de emergência; só o registro técnico do início automático fica de fora. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
 
     <h2>5. Serviços de terceiros</h2>
     <p>Algumas funções enviam dados a serviços externos, apenas o necessário para responder ao pedido:</p>
     <ul>
       <li>Google Maps Platform (mapas, rotas, navegação e locais próximos): recebe sua posição para mostrar o mapa, traçar e guiar a rota e buscar os lugares.</li>
       <li>Google Weather (previsão do tempo): recebe só a posição arredondada, com precisão de cerca de 1 km, sem nenhum outro dado.</li>
-      <li>OpenStreetMap (camadas para motociclistas, como pedágios, postos, oficinas e lombadas): recebe só a região do mapa que está na tela, não a sua posição exata.</li>
+      <li>Servidores públicos do OpenStreetMap (Overpass), que fornecem as camadas para motociclistas, como pedágios, postos, oficinas e lombadas: recebem só a região do mapa que está na tela, não a sua posição exata.</li>
       <li>Sua operadora de celular: entrega o SMS do alerta de queda ao seu contato de emergência (seção 6).</li>
       <li>Google Firebase e Google Drive: login e backup online, se você entrar com o Google (seção 4).</li>
     </ul>
@@ -129,8 +136,9 @@
     <p>O início automático é opcional e vem desligado. Se você ligar, o RPM fica atento ao carregador e ao aviso do Android de que você entrou num veículo, e só depois de um desses sinais liga o GPS por alguns minutos para conferir se você saiu com a moto. Enquanto a opção está ligada, o Android mostra uma notificação discreta do RPM. A permissão de Atividade física só é pedida quando você liga essa opção. Como o Android não diferencia moto de carro ou ônibus, um trajeto de carro pode virar passeio, e é só apagar. Por enquanto, o início automático existe só no Android.</p>
     <p>Esses sinais são usados só no celular e não são enviados a ninguém. Você pode ligar ou desligar cada opção quando quiser, em Perfil › ⚙ › Passeios.</p>
 
-    <h2>8. Compartilhamento nas redes</h2>
+    <h2>8. Compartilhar e exportar passeios</h2>
     <p>A imagem de um passeio só sai do app quando você toca em compartilhar. A zona de privacidade esconde o início e o fim do trajeto, para não mostrar onde você mora ou trabalha.</p>
+    <p>Os arquivos GPX e CSV, que você exporta pelo Resumo do passeio, levam o trajeto completo, sem a zona de privacidade, para onde você mandar. Eles servem para abrir a rota em outros apps e programas: antes de enviar um deles a alguém, lembre que o início e o fim do passeio vão juntos.</p>
 
     <h2>9. Por quanto tempo guardamos</h2>
     <p>Os dados ficam no seu celular até você apagá-los ou desinstalar o app. O backup online fica no seu Google Drive até você excluir a conta no app ou apagar os dados do app no Drive.</p>
