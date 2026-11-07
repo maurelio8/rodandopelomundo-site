@@ -59,17 +59,17 @@
      e o "Seus dados" da tela Sobre (lib/telas/tela_sobre.dart) repete as
      frases das seções 4 (backup, em textoSobreConta), 5 (serviços, em
      itensSobreDados) e 8 (GPX e CSV, em textoSobreDados). Ao mudar um, mudar
-     o outro. As camadas da seção 5 vêm de dois servidores públicos do
-     Overpass (overpass-api.de e overpass.private.coffee); com o card "Ler os
-     arquivos no app no lugar do Overpass", o GitHub Pages entra no lugar
-     deles. A reserva do Google Agenda na web (seção 3) é do Android: no
+     o outro. As camadas da seção 5 vêm dos arquivos por estado do
+     repositório rodandopelomundo-dados (dados.rodandopelomundo.com.br, no
+     GitHub Pages), desde o card "Ler os arquivos no app no lugar do
+     Overpass": o app baixa todos os estados, sem enviar a posição. A reserva do Google Agenda na web (seção 3) é do Android: no
      iPhone, o Calendário da Apple sempre existe. O Crashlytics e a lista de
      espera do iPhone entram aqui pelos cards deles (Crashlytics e Lista de
      espera do iPhone no site). -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 4 de novembro de 2026</p>
+    <p class="atualizado">Última atualização: 7 de novembro de 2026</p>
 
     <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
     <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 13.</p>
@@ -122,11 +122,11 @@
     <ul>
       <li>Google Maps Platform (mapas, rotas, navegação e locais próximos): recebe sua posição para mostrar o mapa, traçar e guiar a rota e buscar os lugares.</li>
       <li>Google Weather (previsão do tempo): recebe só a posição arredondada, com precisão de cerca de 1 km, sem nenhum outro dado.</li>
-      <li>Servidores públicos do OpenStreetMap (Overpass), que fornecem as camadas para motociclistas, como pedágios, postos, oficinas e lombadas: recebem só a região do mapa que está na tela, não a sua posição exata.</li>
+      <li>GitHub Pages (GitHub), que hospeda os arquivos das camadas para motociclistas, do OpenStreetMap, como pedágios, postos, oficinas, borracharias e lombadas: o app baixa de uma vez os arquivos de todos os estados e mostra tudo a partir do celular, mesmo sem internet. Esse download não envia a sua posição; o GitHub recebe só o endereço IP da conexão, como em qualquer site.</li>
       <li>Sua operadora de celular: entrega o SMS do alerta de queda ao seu contato de emergência (seção 6).</li>
       <li>Google Firebase e Google Drive: login e backup online, se você entrar com o Google (seção 4).</li>
     </ul>
-    <p>Cada um desses serviços tem sua própria política de privacidade, como a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a>.</p>
+    <p>Cada um desses serviços tem sua própria política de privacidade, como a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a> e a <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Declaração de Privacidade do GitHub</a>.</p>
 
     <h2>6. Alerta de queda</h2>
     <p>Se você ligar o alerta de queda, durante um passeio gravado o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com seu nome, a hora, o link da sua localização e, se você ligar essa opção, os dados da ficha de segurança. A cobrança do SMS segue o plano da sua operadora. Quando o SMS não pode sair sozinho (sem a permissão, por exemplo), nenhuma mensagem é enviada: o app mostra uma tela com botões para ligar para o contato, mandar a mensagem já escrita ou ligar para o SAMU (192). Essa função é um apoio e não substitui os serviços de emergência.</p>
