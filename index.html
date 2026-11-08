@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>RPM · Rodando Pelo Mundo — o app de passeios de moto</title>
-  <meta name="description" content="Grave seus passeios de moto, acompanhe consumo, manutenção e documentos, receba avisos de segurança e encontre eventos. Feito por quem anda de moto.">
+  <meta name="description" content="Saia da tela e caia na estrada. O RPM grava seus passeios de moto, lembra da manutenção e dos documentos e mostra quanto a moto custa, enquanto você vive o caminho. Feito por quem anda de moto.">
   <link rel="canonical" href="https://rodandopelomundo.com.br/">
   <link rel="icon" href="assets/img/simbolo.svg" type="image/svg+xml">
   <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
@@ -13,7 +13,7 @@
   <!-- Prévia ao compartilhar o link (WhatsApp, Instagram etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="RPM · Rodando Pelo Mundo">
-  <meta property="og:description" content="Cada estrada vira história. O app para gravar e cuidar dos seus passeios de moto.">
+  <meta property="og:description" content="Saia da tela, caia na estrada. O app que grava seus passeios de moto e cuida dela enquanto você vive o caminho.">
   <meta property="og:url" content="https://rodandopelomundo.com.br/">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Rodando Pelo Mundo">
@@ -57,9 +57,10 @@
       <span class="extenso">Rodando Pelo Mundo</span>
     </a>
     <nav class="menu" aria-label="Seções">
+      <a href="#be-off">Be Off</a>
+      <a href="#historia">História</a>
       <a href="#recursos">Recursos</a>
       <a href="#telas">Telas</a>
-      <a href="#seus-dados">Seus dados</a>
       <a href="#perguntas">Perguntas</a>
       <a class="botao" href="#baixar">Baixar</a>
     </nav>
@@ -72,11 +73,11 @@
   <section class="abertura">
     <div class="envoltorio grade">
       <div>
-        <h1>Cada estrada vira história.</h1>
-        <p class="linha-fina">O RPM grava seus passeios de moto, cuida da manutenção e dos documentos e avisa o que importa antes e durante a viagem. Feito por quem anda de moto.</p>
+        <h1>Saia da tela. Caia na estrada.</h1>
+        <p class="linha-fina">O RPM grava seus passeios de moto, lembra da manutenção e dos documentos e mostra quanto a moto custa, enquanto o celular fica no suporte. Você fica com o vento, o ronco do motor e o caminho.</p>
         <div class="acoes">
           <a class="botao" href="#baixar">Quero usar</a>
-          <a class="botao contorno" href="#recursos">Ver o que ele faz</a>
+          <a class="botao contorno" href="#be-off">O que é o Be Off</a>
         </div>
         <p class="selo-plataforma">Chega primeiro ao Android. Versão para iPhone nos planos.</p>
       </div>
@@ -145,11 +146,86 @@
     </div>
   </section>
 
-  <!-- ======================= MANIFESTO ======================= -->
-  <section class="secao manifesto" style="padding-top:0">
+  <!-- ======================= BE OFF (o movimento) =======================
+       O propósito do app: o celular vai no suporte gravando, e a pessoa
+       vive a estrada. A placa verde imita as placas de orientação das
+       rodovias brasileiras; a última linha, "Sem destino", lembra o
+       primeiro nome do app e o jeito de pedalar da história abaixo. -->
+  <section class="secao" id="be-off" style="padding-top:0">
+    <div class="envoltorio be-off">
+      <div class="be-off-texto">
+        <h2 class="lema">Be Off.</h2>
+        <p class="contraponto">Off da tela. On na estrada.</p>
+        <p>A gente passa o dia preso numa tela, olhando a vida dos outros passar. Na moto não tem como: é o vento no peito, o ronco do motor, o cheiro da chuva chegando, a paisagem mudando a cada curva.</p>
+        <p>Be Off é o convite do RPM para viver isso de perto, sozinho ou com a turma: estradas, cidades, praias, serras, climas e culturas diferentes, e um café em cada lugar novo. O celular vai no suporte gravando, e o resto é com você.</p>
+      </div>
+
+      <figure class="placa-poste">
+        <div class="placa">
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V4M5 11l7-7 7 7"/></svg>
+              <span class="destino">Serra</span><span class="km">48 km</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19 18 7M9 6h9v9"/></svg>
+              <span class="destino">Praia</span><span class="km">112 km</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4M11 5l-7 7 7 7"/></svg>
+              <span class="destino">Café na cidade vizinha</span><span class="km">23 km</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-6a5 5 0 0 1 5-5h3M17 6l4 4-4 4M12 15a5 5 0 0 0-5-5H4M7 6l-4 4 4 4"/></svg>
+              <span class="destino">Sem destino</span><span class="km"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="postes" aria-hidden="true"><span></span><span></span></div>
+        <figcaption>Para onde vamos hoje?</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================= HISTÓRIA =======================
+       De onde o app veio, numa estrada com paradas (é uma sequência no
+       tempo, por isso a linha). Em primeira pessoa, sem nome: quem criou
+       o app pediu para não aparecer o nome dele no app nem no código.
+       Na tela larga a estrada fica deitada; no celular, em pé. -->
+  <section class="secao" id="historia" style="padding-top:0">
     <div class="envoltorio">
-      <p>O mapa leva você até um lugar. O RPM guarda o caminho.</p>
-      <p>Quem anda de moto muitas vezes sai sem destino e quer saber depois quanto rodou, quanto gastou e quando vence a próxima revisão. O RPM junta tudo isso num app pensado para usar com luva, no sol e com a moto parada no acostamento.</p>
+      <div class="cabeca">
+        <h2>Da bicicleta à moto.</h2>
+        <p>O RPM foi feito por quem anda de moto, e a história começou bem antes do primeiro motor.</p>
+      </div>
+
+      <ol class="estrada">
+        <li class="parada">
+          <h3>A bicicleta</h3>
+          <p>Eu ajustava, customizava e saía pedalando sem destino pelo bairro, só para ver o que tinha na próxima rua.</p>
+        </li>
+        <li class="parada">
+          <h3>A janela do carro</h3>
+          <p>Nas viagens com a família, o melhor era a pista passando, o vento entrando pela janela e a cabeça nas nuvens.</p>
+        </li>
+        <li class="parada">
+          <h3>O primeiro carro</h3>
+          <p>Com a habilitação, vieram as manutenções feitas com as próprias mãos e as viagens pelo meu estado, depois por outros.</p>
+        </li>
+        <li class="parada">
+          <h3>A moto</h3>
+          <p>Quando fiquei sem o carro, ônibus e aplicativo não deram conta. Depois de 15 anos dirigindo, tirei a habilitação de moto só para resolver as coisas do dia a dia. Me apaixonei: era a bicicleta da infância, agora com motor.</p>
+        </li>
+        <li class="parada chegada">
+          <h3>O RPM</h3>
+          <p>Moto pede cuidados que o carro e a bicicleta não pediam, e eu esquecia: óleo, corrente, calibragem, revisão. Ao mesmo tempo, a estrada começou a chamar. Criei o RPM para guardar cada passeio, conhecer lugares novos e saber a hora de cada cuidado e quanto a moto custa.</p>
+        </li>
+      </ol>
+
+      <blockquote class="convite">
+        <p>Agora o convite é seu: pegar a estrada, sozinho ou com a turma, e viver o caminho de perto.</p>
+        <footer>Quem criou o RPM</footer>
+      </blockquote>
     </div>
   </section>
 
@@ -157,8 +233,8 @@
   <section class="secao" id="recursos" style="padding-top:0">
     <div class="envoltorio">
       <div class="cabeca">
-        <h2>Tudo da sua moto, num painel só.</h2>
-        <p>Do primeiro quilômetro ao café no mirante.</p>
+        <h2>Ele grava, lembra e cuida.<br>Você pilota.</h2>
+        <p>Do primeiro quilômetro ao café no mirante, num painel só.</p>
       </div>
 
       <div class="mosaico">
@@ -166,7 +242,7 @@
         <article class="recurso largo">
           <span class="espia acento"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span>
           <h3>Grave seus passeios</h3>
-          <p>Toque no ▶︎ e saia rodando: na chegada, o app encerra o passeio sozinho. Depois, veja o caminho colorido pela velocidade.</p>
+          <p>Toque no ▶︎, guarde o celular no suporte e saia rodando: na chegada, o app encerra o passeio sozinho. Depois, veja o caminho colorido pela velocidade.</p>
           <div class="rota-vel" aria-hidden="true">
             <svg viewBox="0 0 640 170">
               <path class="grade-mapa" d="M0 40H640M0 110H640M110 0V170M260 0V170M410 0V170M560 0V170" stroke-width="6" fill="none"/>
@@ -211,7 +287,7 @@
         <article class="recurso">
           <span class="espia ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z"/></svg></span>
           <h3>Manutenção e documentos</h3>
-          <p>As luzes do painel avisam a revisão, o pneu e o IPVA antes de vencer.</p>
+          <p>As luzes do painel avisam a revisão, a corrente, o pneu e o IPVA antes de vencer. Você não precisa guardar tudo de cabeça.</p>
           <div class="chips"><span>Por km ou por tempo</span><span>Pneus pelo DOT</span><span>Licenciamento e CNH</span><span>Checkup antes da viagem</span></div>
         </article>
 
@@ -232,7 +308,7 @@
         <article class="recurso meio">
           <span class="espia azul"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM16 2v4M8 2v4M3 10h18"/></svg></span>
           <h3>Eventos de moto</h3>
-          <p>A agenda dos encontros perto de você. Marque "Quero ir" e receba o lembrete na véspera.</p>
+          <p>A agenda dos encontros perto de você, para rodar com a turma e trocar histórias. Marque "Quero ir" e receba o lembrete na véspera.</p>
           <div class="chips"><span>Distância até o evento</span><span>Adicionar à agenda</span><span>Imagem do passeio para as redes</span></div>
         </article>
 
@@ -274,14 +350,19 @@
     </div>
   </section>
 
-  <!-- ======================= COMO FUNCIONA ======================= -->
+  <!-- ======================= COMO FUNCIONA (Be Off na prática) =======================
+       Os três passos mostram como o app foi feito para ser tocado o mínimo
+       possível: os avisos que não são de segurança esperam a chegada. -->
   <section class="secao" style="padding-top:0">
     <div class="envoltorio">
-      <div class="cabeca"><h2>Como funciona</h2></div>
+      <div class="cabeca">
+        <h2>Be Off na prática</h2>
+        <p>O RPM foi feito para você mexer no celular o mínimo possível.</p>
+      </div>
       <ol class="passos">
-        <li><h3>Cadastre sua moto</h3><p>Escolha marca, modelo e ano no catálogo e informe o tamanho do tanque.</p></li>
-        <li><h3>Saia rodando</h3><p>Toque no ▶︎ antes de sair, e o RPM encerra o passeio sozinho quando você chega.</p></li>
-        <li><h3>Veja seu passeio</h3><p>Mapa, velocidades, altimetria, consumo e bateria usada, tudo no resumo.</p></li>
+        <li><h3>Cadastre a moto uma vez</h3><p>Escolha marca, modelo e ano no catálogo e informe o tamanho do tanque. Não precisa repetir.</p></li>
+        <li><h3>Toque no ▶︎ e guarde o celular</h3><p>Com a tela bloqueada, o passeio segue gravando. Avisos de manutenção e medalhas esperam você chegar; só o que é de segurança aparece na hora, como o tanque na reserva.</p></li>
+        <li><h3>Chegou? O passeio fecha sozinho</h3><p>Com a moto parada, o RPM encerra o passeio. Mapa, velocidades, altimetria, consumo e bateria ficam no resumo, para lembrar, compartilhar ou cuidar da moto.</p></li>
       </ol>
     </div>
   </section>
@@ -328,6 +409,7 @@
     <div class="envoltorio">
       <div class="cabeca"><h2>Perguntas frequentes</h2></div>
       <div class="perguntas">
+        <details><summary>Um app de celular pedindo para largar o celular?</summary><p>Isso mesmo. O RPM grava o passeio sozinho, com o celular no suporte ou no bolso, e só pede um toque no ▶︎ antes de sair. Ele existe para guardar o caminho e cuidar da moto; a estrada fica com você. E, na moto, olho na pista: mexer no celular andando é perigoso.</p></details>
         <details><summary>O app é gratuito?</summary><p>Sim. O RPM é grátis e sem anúncios, e o que ele faz no lançamento continua grátis. Se um dia surgir um plano pago, ele vai trazer funções novas, sem cobrar pelo que já existe.</p></details>
         <details><summary>Gasta muita bateria?</summary><p>A gravação usa o GPS, que consome bateria. Por isso o próprio app mostra quanto de bateria cada passeio usou. Em viagens longas, o ideal é deixar o celular no carregador da moto.</p></details>
         <details><summary>Funciona sem internet?</summary><p>A gravação do passeio funciona sem internet, e as camadas para motociclistas também: postos, pedágios, oficinas, borracharias e mirantes do Brasil inteiro ficam guardados no celular. O mapa de fundo (o Google guarda as áreas que você já viu), a previsão do tempo e a pesquisa de lugares precisam de conexão.</p></details>
@@ -359,6 +441,7 @@
         </div>
         <div><a class="botao" href="mailto:approdandopelomundo@gmail.com?subject=Quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20RPM">Me avise no lançamento</a></div>
         <p class="t70">Os bastidores da reta final e a chamada para quem quiser testar antes do lançamento saem no Instagram do app, <a href="https://www.instagram.com/app.rodandopelomundo/" target="_blank" rel="noopener">@app.rodandopelomundo</a>.</p>
+        <p class="t70">Enquanto isso, pratique o Be Off: pegue a estrada e, depois do passeio, mostre por onde andou com #BeOffRPM.</p>
       </div>
     </div>
   </section>
@@ -384,7 +467,7 @@
 
 <!-- ======================= BARRA DO CELULAR (igual à do app) ======================= -->
 <nav class="barra-celular" aria-label="Atalhos">
-  <a href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg>Início</a>
+  <a href="#be-off"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8M6.4 6.4a8 8 0 1 0 11.2 0"/></svg>Be Off</a>
   <a href="#recursos"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>Recursos</a>
   <a class="central" href="#baixar" aria-label="Baixar o app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></a>
   <a href="#seus-dados"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Dados</a>
