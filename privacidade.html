@@ -63,22 +63,27 @@
      repositório rodandopelomundo-dados (dados.rodandopelomundo.com.br, no
      GitHub Pages), desde o card "Ler os arquivos no app no lugar do
      Overpass": o app baixa todos os estados, sem enviar a posição. A reserva do Google Agenda na web (seção 3) é do Android: no
-     iPhone, o Calendário da Apple sempre existe. O Crashlytics e a lista de
-     espera do iPhone entram aqui pelos cards deles (Crashlytics e Lista de
-     espera do iPhone no site). -->
+     iPhone, o Calendário da Apple sempre existe. O Crashlytics entra aqui pelo card
+     dele. A seção 9 (lista de espera do iPhone, desde 09/11) é só do site:
+     o app não coleta esses dados, por isso o "Seus dados" da tela Sobre não
+     a repete. O formulário fica no index.html (#iphone, com a data do aviso
+     no campo escondido "aviso") e o código do Apps Script em
+     _ferramentas/lista_espera_iphone.gs; ao mudar o que a lista guarda,
+     mudar os três juntos. -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 7 de novembro de 2026</p>
+    <p class="atualizado">Última atualização: 9 de novembro de 2026</p>
 
-    <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
-    <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 13.</p>
+    <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela vale também para a lista de espera do iPhone, no site (seção 9). Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+    <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 14.</p>
 
     <h2>1. O resumo</h2>
     <ul>
       <li>Você pode usar o app sem criar conta. Nesse caso, tudo fica só no seu celular.</li>
       <li>Se entrar com o Google, o backup é salvo numa pasta oculta do app no seu próprio Google Drive. Nós não temos acesso ao conteúdo desse backup.</li>
       <li>Não vendemos dados, não mostramos anúncios e não compartilhamos seus passeios com ninguém sem você mandar.</li>
+      <li>Pelo site, só recebemos o e-mail de quem entra na lista de espera do iPhone, e ele serve só para o aviso do lançamento (seção 9).</li>
     </ul>
 
     <h2>2. Dados que ficam no seu celular</h2>
@@ -125,6 +130,7 @@
       <li>GitHub Pages (GitHub), que hospeda os arquivos das camadas para motociclistas, do OpenStreetMap, como pedágios, postos, oficinas, borracharias e lombadas: o app baixa de uma vez os arquivos de todos os estados e mostra tudo a partir do celular, mesmo sem internet. Esse download não envia a sua posição; o GitHub recebe só o endereço IP da conexão, como em qualquer site.</li>
       <li>Sua operadora de celular: entrega o SMS do alerta de queda ao seu contato de emergência (seção 6).</li>
       <li>Google Firebase e Google Drive: login e backup online, se você entrar com o Google (seção 4).</li>
+      <li>Google Planilhas, Apps Script e Gmail: recebem e guardam a lista de espera do iPhone, do site, e enviam o e-mail de confirmação (seção 9).</li>
     </ul>
     <p>Cada um desses serviços tem sua própria política de privacidade, como a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a> e a <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Declaração de Privacidade do GitHub</a>.</p>
 
@@ -140,21 +146,35 @@
     <p>A imagem de um passeio só sai do app quando você toca em compartilhar. A zona de privacidade esconde o início e o fim do trajeto, para não mostrar onde você mora ou trabalha.</p>
     <p>Os arquivos GPX e CSV, que você exporta pelo Resumo do passeio, levam o trajeto completo, sem a zona de privacidade, para onde você mandar. Eles servem para abrir a rota em outros apps e programas: antes de enviar um deles a alguém, lembre que o início e o fim do passeio vão juntos.</p>
 
-    <h2>9. Por quanto tempo guardamos</h2>
-    <p>Os dados ficam no seu celular até você apagá-los ou desinstalar o app. O backup online fica no seu Google Drive até você excluir a conta no app ou apagar os dados do app no Drive.</p>
+    <h2 id="lista-iphone">9. Lista de espera do iPhone (site)</h2>
+    <p>O RPM chega primeiro ao Android. Quem tem iPhone pode deixar o e-mail na lista de espera do site. Nesse caso, guardamos:</p>
+    <ul>
+      <li>seu e-mail;</li>
+      <li>se você quer testar o app antes do lançamento;</li>
+      <li>como você conheceu o RPM, se responder;</li>
+      <li>a data e a hora da inscrição e a versão do aviso que aparecia no formulário.</li>
+    </ul>
+    <p>Para quê: avisar quando o app chegar à App Store e, se você marcar, mandar o convite para testar antes, pelo TestFlight, da Apple. Somadas, a quantidade de inscritos e as respostas sobre como as pessoas conheceram o RPM também ajudam a decidir quando fazer a versão para iPhone e onde divulgar o app. Seu e-mail não é usado para propaganda nem para mais nada.</p>
+    <p>A base legal é o seu consentimento (art. 7º, I, da LGPD), dado ao enviar o formulário. Você pode retirá-lo quando quiser, saindo da lista.</p>
+    <p>A lista fica numa planilha do Google, na conta do app. Um pequeno programa do Google (Apps Script) recebe o formulário, grava a inscrição e envia o e-mail de confirmação pelo Gmail do app. O Google guarda e processa esses dados para nós, como operador, seguindo a política dele. Se o convite de teste for feito direto no TestFlight, seu e-mail é informado à Apple só para isso, e daí em diante vale também a <a href="https://www.apple.com/br/legal/privacy/" rel="noopener">política de privacidade da Apple</a>. A lista não é publicada nem passada a mais ninguém.</p>
+    <p>Guardamos a lista até mandar o aviso do lançamento no iPhone e, depois disso, ela é apagada. Se a versão para iPhone for abandonada, a lista também é apagada. Em qualquer caso, nenhum e-mail fica nela por mais de 24 meses.</p>
+    <p>Para sair, responda ao e-mail de confirmação com a palavra "sair" ou escreva para <a href="mailto:approdandopelomundo@gmail.com?subject=Sair%20da%20lista%20do%20iPhone">approdandopelomundo@gmail.com</a> com o assunto "Sair da lista do iPhone". Apagamos seu e-mail em até 15 dias. A lista não tem relação com a conta do app: sair dela não mexe nos seus dados do app.</p>
 
-    <h2>10. Seus direitos</h2>
+    <h2>10. Por quanto tempo guardamos</h2>
+    <p>Os dados ficam no seu celular até você apagá-los ou desinstalar o app. O backup online fica no seu Google Drive até você excluir a conta no app ou apagar os dados do app no Drive. O prazo da lista de espera do iPhone está na seção 9.</p>
+
+    <h2>11. Seus direitos</h2>
     <p>Pela LGPD, você pode confirmar quais dados existem, acessá-los, corrigi-los, levá-los para outro serviço e pedir que sejam apagados. A maior parte disso você faz no próprio app. Para qualquer pedido, escreva para o e-mail abaixo.</p>
     <p>Se o seu pedido não for atendido, você também pode reclamar à <a href="https://www.gov.br/anpd/pt-br" rel="noopener">Autoridade Nacional de Proteção de Dados (ANPD)</a>.</p>
     <p>Veja como <a href="excluir-conta.html">excluir sua conta e seus dados</a>.</p>
 
-    <h2>11. Idade mínima</h2>
-    <p>O app é destinado a maiores de 18 anos.</p>
+    <h2>12. Idade mínima</h2>
+    <p>O app e a lista de espera do iPhone são destinados a maiores de 18 anos.</p>
 
-    <h2>12. Mudanças nesta política</h2>
-    <p>Quando esta política mudar, a data no topo será atualizada e, se a mudança for importante, avisaremos no app.</p>
+    <h2>13. Mudanças nesta política</h2>
+    <p>Quando esta política mudar, a data no topo será atualizada e, se a mudança for importante, avisaremos no app. Se a mudança for no que fazemos com a lista de espera do iPhone, avisaremos também por e-mail quem estiver nela.</p>
 
-    <h2>13. Responsável e contato</h2>
+    <h2>14. Responsável e contato</h2>
     <p>Controlador: Marcos Aurélio Luiz de Oliveira, pessoa física, desenvolvedor do Rodando Pelo Mundo.<br>Canal para assuntos de dados pessoais: <a href="mailto:approdandopelomundo@gmail.com">approdandopelomundo@gmail.com</a></p>
     <p>Como agente de tratamento de pequeno porte (Resolução CD/ANPD nº 2/2022), o RPM não tem um encarregado (DPO) indicado. Os pedidos sobre os seus dados são respondidos pelo próprio controlador, por esse e-mail, em até 15 dias.</p>
   </div></div>

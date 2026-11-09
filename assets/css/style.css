@@ -107,6 +107,10 @@ body {
 img, svg { display: block; max-width: 100%; }
 a { color: var(--acento); text-underline-offset: 3px; }
 :focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 8px; }
+[hidden] { display: none !important; }
+
+/* Texto só para leitor de tela (o rótulo do e-mail, por exemplo) */
+.so-leitor { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 .envoltorio { width: min(100% - 2.5rem, var(--largura)); margin-inline: auto; }
 
@@ -374,12 +378,53 @@ p { margin: 0; max-width: 62ch; }
 .perguntas details p { color: var(--t70); padding-bottom: 1.1rem; }
 
 /* Baixar */
-.baixar { background: var(--cartao); border: 1px solid var(--borda); border-radius: 28px; padding: clamp(1.8rem, 5vw, 3rem); display: grid; gap: 1.2rem; }
+.baixar { background: var(--cartao); border: 1px solid var(--borda); border-radius: 28px; padding: clamp(1.8rem, 5vw, 3rem); display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
+.baixar .botao { text-align: center; }
 .lojas { display: flex; flex-wrap: wrap; gap: 10px; }
 .loja { display: flex; align-items: center; gap: 12px; background: var(--elevado); border-radius: 18px; padding: 12px 18px 12px 14px; min-width: 230px; }
 .loja svg { width: 28px; height: 28px; fill: none; stroke: var(--tinta); stroke-width: 2; stroke-linecap: round; }
 .loja strong { display: block; font-size: 1.05rem; }
 .loja small { color: var(--t70); }
+/* O bloco da App Store é um atalho para a lista de espera */
+a.loja { color: inherit; text-decoration: none; border: 1px solid transparent; }
+a.loja:hover { border-color: var(--t55); }
+a.loja small { color: var(--acento); font-weight: 600; }
+
+/* Lista de espera do iPhone: um painel dentro do cartão Baixar, como os
+   cartões dentro de cartões do app. Campos em pílula, iguais aos botões. */
+.lista-iphone { background: var(--elevado); border-radius: 22px; padding: clamp(1.2rem, 3.5vw, 1.8rem); display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.lista-cabeca { display: flex; align-items: center; gap: .9rem; }
+.lista-iphone h3 { font-size: 2rem; }
+.lista-iphone p { color: var(--t70); }
+.form-lista { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.campo-email { display: flex; flex-wrap: wrap; gap: .6rem; max-width: 640px; }
+.campo-email input {
+  flex: 1 1 260px; width: 100%; min-width: 0; min-height: 52px; padding: 0 1.3rem;
+  border-radius: 999px; border: 1px solid var(--borda);
+  background: var(--cartao); color: var(--tinta); font: inherit;
+}
+.campo-email input::placeholder { color: var(--t55); }
+.campo-email input:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; border-color: transparent; }
+.campo-email .botao:disabled { opacity: .6; cursor: progress; }
+.opcoes-lista { display: flex; flex-wrap: wrap; gap: .8rem 2rem; align-items: center; }
+.marcar { display: flex; align-items: center; gap: .65rem; min-height: 44px; cursor: pointer; font-weight: 500; }
+.marcar input { width: 22px; height: 22px; margin: 0; flex: none; accent-color: var(--acento); }
+.escolher { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .7rem; min-width: 0; color: var(--tinta); font-weight: 500; }
+.escolher .opcional { color: var(--t55); font-weight: 400; }
+.escolher select {
+  max-width: 100%; min-height: 44px; padding: 0 .9rem; border-radius: 12px;
+  border: 1px solid var(--borda); background: var(--cartao); color: var(--tinta); font: inherit;
+}
+.lista-iphone .aviso-lista { font-size: .88rem; color: var(--t55); max-width: 70ch; }
+.estado-lista:empty { display: none; }
+.lista-iphone .estado-lista { font-weight: 600; color: var(--urgente); }
+/* Isca para robôs: fora da tela, sem ocupar espaço */
+.isca { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.lista-pronta { display: grid; gap: .8rem; }
+.lista-pronta:focus { outline: none; }
+.lista-pronta-titulo { font-family: var(--saira); font-stretch: 75%; font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--em-dia) !important; }
+.lista-pronta strong { color: var(--tinta); }
+.lista-iphone .botao.contorno { border-color: var(--t55); }
 
 /* Rodapé */
 .rodape { padding: 3rem 0 3.5rem; color: var(--t70); font-size: .92rem; }
@@ -447,6 +492,11 @@ p { margin: 0; max-width: 62ch; }
 }
 
 @media (max-width: 560px) {
+  .campo-email .botao { flex: 1 1 100%; }
+  .escolher { flex: 1 1 100%; }
+  .escolher select { width: 100%; }
+  .baixar .botao { width: 100%; padding: .7rem 1.2rem; }
+  .loja { min-width: 0; flex: 1 1 100%; }
   .mosaico { grid-template-columns: 1fr; }
   .recurso.largo { grid-column: span 1; }
   .dados { grid-template-columns: 1fr; }
