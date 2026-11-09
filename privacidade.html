@@ -69,7 +69,15 @@
      a repete. O formulário fica no index.html (#iphone, com a data do aviso
      no campo escondido "aviso") e o código do Apps Script em
      _ferramentas/lista_espera_iphone.gs; ao mudar o que a lista guarda,
-     mudar os três juntos. -->
+     mudar os três juntos.
+     Conferida de novo em 09/11, depois da saída do início automático (card
+     "Política e Seus dados sem o início automático"): sem a Atividade
+     física na seção 3, a seção 7 só com o fim automático (que usa só o GPS
+     da gravação; o carregador e o aviso de veículo do Android também
+     saíram) e o registro técnico das seções 2 e 4 só do fim automático. A
+     linha da Localização na seção 3 segue o porquê de textos_permissoes.dart,
+     e o "Seus dados" (textoSobreDados) diz que, com a tela apagada, a
+     localização só é usada durante a gravação. -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
@@ -95,7 +103,7 @@
       <li>Seu nome e foto de perfil, se você informar.</li>
       <li>Ficha de segurança e contato de emergência, se você preencher. A ficha pode ter dados de saúde, como o tipo sanguíneo, que a LGPD trata como sensíveis: ela é opcional, é usada no alerta de queda e você pode apagá-la quando quiser.</li>
       <li>Leituras do acelerômetro durante os passeios, usadas na detecção de queda.</li>
-      <li>Um registro técnico do início e do fim automáticos, com horários, velocidades e distâncias, sem a sua posição, usado para corrigir falhas. Ele fica só no celular, fora do backup e da cópia entre aparelhos, e só sai dele se você mesmo enviar.</li>
+      <li>Um registro técnico do fim automático (quando a moto parou, por quanto tempo e por que o passeio foi encerrado), só com horários e durações, sem a sua posição, usado para corrigir falhas. Ele fica só no celular, fora do backup e da cópia entre aparelhos, e só sai dele se você mesmo enviar.</li>
       <li>Eventos marcados como "Quero ir", oficinas salvas e suas preferências do app.</li>
     </ul>
     <p>Ao trocar de celular pelo assistente do Android que copia apps e dados, por cabo ou Wi-Fi, o banco de dados do app (seus passeios, motos e registros) vai junto, direto do aparelho antigo para o novo. Isso vale do Android 12 em diante; nas versões anteriores, os dados do app não são copiados. No celular novo, você entra de novo na conta Google, se usar, e permite de novo as permissões. O backup automático do próprio Android na nuvem fica desligado para o app: seus dados só vão para a nuvem pelo backup online do RPM, se você entrar com o Google (seção 4).</p>
@@ -105,9 +113,8 @@
       <table>
         <thead><tr><th>Permissão</th><th>Para quê</th></tr></thead>
         <tbody>
-          <tr><td>Localização, só durante o uso do app</td><td>Gravar a rota dos seus passeios, medir distância, velocidade e altimetria, mostrar o mapa onde você está, a previsão do tempo e locais próximos, e informar sua posição no alerta de queda. Com a tela apagada, o RPM só usa a localização enquanto grava um passeio ou, se você ligar o início automático, enquanto espera você sair com a moto (seção 7). Nesses casos, o Android mostra uma notificação do RPM. O app nunca pede a localização "o tempo todo".</td></tr>
+          <tr><td>Localização, só durante o uso do app</td><td>Gravar a rota dos seus passeios, medir distância, velocidade e altimetria, mostrar o mapa onde você está, a previsão do tempo e locais próximos, e informar sua posição no alerta de queda. Com a tela apagada, o RPM só usa a localização enquanto grava um passeio que você iniciou, e o Android mostra uma notificação do RPM durante todo esse tempo. O app nunca pede a localização "o tempo todo".</td></tr>
           <tr><td>Notificações</td><td>Mostrar o passeio em andamento com a tela bloqueada e avisar de revisão, documentos vencendo, tanque na reserva e chuva antes dos eventos. Nada de propaganda.</td></tr>
-          <tr><td>Atividade física</td><td>Só para o início automático, se você ligar a opção: o celular percebe quando você entra num veículo, e o passeio começa sozinho. Também ajuda o fim automático a perceber quando você para. É pedida só quando você liga o início automático. Sem ela, os passeios iniciados pelo botão ▶︎ funcionam normalmente.</td></tr>
           <tr><td>Bateria sem restrição</td><td>Alguns celulares fecham apps em segundo plano para economizar bateria, e isso pode cortar a gravação no meio do passeio. Liberando nos ajustes do Android, o RPM continua gravando com a tela bloqueada.</td></tr>
           <tr><td>SMS</td><td>Para o alerta de queda mandar sua localização ao contato de emergência, mesmo sem internet, somente se uma queda for detectada e você não cancelar a contagem. É pedida só quando você liga o alerta de queda.</td></tr>
           <tr><td>Alarme em tela cheia</td><td>Para o alarme do alerta de queda acender a tela e aparecer por cima do bloqueio, com o botão "Estou bem" grande. Só é usada pelo alerta de queda.</td></tr>
@@ -120,7 +127,7 @@
     <p>Você pode negar ou retirar qualquer permissão nas configurações do celular. A função que depende dela deixa de funcionar, e o restante do app continua.</p>
 
     <h2>4. Conta Google e backup online (opcional)</h2>
-    <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Ele leva uma cópia de todos os dados da seção 2, inclusive os trajetos dos passeios, a ficha de segurança e o contato de emergência; só o registro técnico do início automático fica de fora. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
+    <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Ele leva uma cópia de todos os dados da seção 2, inclusive os trajetos dos passeios, a ficha de segurança e o contato de emergência; só o registro técnico do fim automático fica de fora. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
 
     <h2>5. Serviços de terceiros</h2>
     <p>Algumas funções enviam dados a serviços externos, apenas o necessário para responder ao pedido:</p>
@@ -137,10 +144,10 @@
     <h2>6. Alerta de queda</h2>
     <p>Se você ligar o alerta de queda, durante um passeio gravado o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com seu nome, a hora, o link da sua localização e, se você ligar essa opção, os dados da ficha de segurança. A cobrança do SMS segue o plano da sua operadora. Quando o SMS não pode sair sozinho (sem a permissão, por exemplo), nenhuma mensagem é enviada: o app mostra uma tela com botões para ligar para o contato, mandar a mensagem já escrita ou ligar para o SAMU (192). Essa função é um apoio e não substitui os serviços de emergência.</p>
 
-    <h2>7. Início e fim automáticos</h2>
-    <p>O fim automático vem ligado e vale para todos os passeios, inclusive os que você inicia pelo botão ▶︎: com a moto parada pelo tempo escolhido, o passeio é encerrado. Para isso, ele usa só o GPS da própria gravação, o carregador da moto e, se você tiver permitido a Atividade física, o aviso do Android de que a viagem terminou. Fora de um passeio, ele não observa nada.</p>
-    <p>O início automático é opcional e vem desligado. Se você ligar, o RPM fica atento ao carregador e ao aviso do Android de que você entrou num veículo, e só depois de um desses sinais liga o GPS por alguns minutos para conferir se você saiu com a moto. Enquanto a opção está ligada, o Android mostra uma notificação discreta do RPM. A permissão de Atividade física só é pedida quando você liga essa opção. Como o Android não diferencia moto de carro ou ônibus, um trajeto de carro pode virar passeio, e é só apagar. Por enquanto, o início automático existe só no Android.</p>
-    <p>Esses sinais são usados só no celular e não são enviados a ninguém. Você pode ligar ou desligar cada opção quando quiser, em Perfil › ⚙ › Passeios.</p>
+    <h2>7. Fim automático</h2>
+    <p>O passeio só começa quando você toca no botão ▶︎. O fim automático vem ligado e vale para todos os passeios: com a moto parada pelo tempo escolhido, o passeio é encerrado no último instante em que ela andou. Com o passeio pausado, ele nunca é encerrado sozinho. Para isso, o app usa só o GPS da própria gravação, sem nenhum outro sensor. Fora de um passeio, ele não observa nada.</p>
+    <p>Quando o GPS demora a pegar no começo do passeio, numa garagem por exemplo, o app pode ligar o primeiro ponto do passeio ao lugar onde a moto estava estacionada: o fim do seu último passeio com ela ou a última posição que o celular tinha guardado antes de você tocar no ▶︎. Esse trecho aparece tracejado no mapa e é calculado no próprio celular.</p>
+    <p>Nada disso é enviado a ninguém. Você pode desligar ou ajustar o fim automático quando quiser, em Perfil › ⚙ › Passeios.</p>
 
     <h2>8. Compartilhar e exportar passeios</h2>
     <p>A imagem de um passeio só sai do app quando você toca em compartilhar. A zona de privacidade esconde o início e o fim do trajeto, para não mostrar onde você mora ou trabalha.</p>
