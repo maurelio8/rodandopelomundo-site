@@ -77,11 +77,17 @@
      saíram) e o registro técnico das seções 2 e 4 só do fim automático. A
      linha da Localização na seção 3 segue o porquê de textos_permissoes.dart,
      e o "Seus dados" (textoSobreDados) diz que, com a tela apagada, a
-     localização só é usada durante a gravação. -->
+     localização só é usada durante a gravação.
+     Em 10/11 a seção 4 ganhou o parágrafo #uso-limitado (card "Frase de uso
+     limitado do Google na política"): é a declaração pedida pelo Google
+     para o login e o escopo drive.appdata, sem nenhuma prática nova. Fica
+     só aqui: o textoSobreConta da tela Sobre não precisa repeti-lo. Se o
+     app passar a pedir outro escopo do Google, rever este parágrafo e a
+     tela Acesso a dados do Google Auth Platform. -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 9 de novembro de 2026</p>
+    <p class="atualizado">Última atualização: 10 de novembro de 2026</p>
 
     <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela vale também para a lista de espera do iPhone, no site (seção 9). Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
     <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 14.</p>
@@ -128,6 +134,7 @@
 
     <h2>4. Conta Google e backup online (opcional)</h2>
     <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Ele leva uma cópia de todos os dados da seção 2, inclusive os trajetos dos passeios, a ficha de segurança e o contato de emergência; só o registro técnico do fim automático fica de fora. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
+    <p id="uso-limitado">Usamos os dados que recebemos do Google (nome, e-mail, foto e o acesso à área de dados do app no seu Drive) apenas para o login e o backup descritos nesta seção. Não vendemos esses dados, não os usamos para publicidade e não os repassamos a ninguém. O uso e a transferência para qualquer outro app de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
 
     <h2>5. Serviços de terceiros</h2>
     <p>Algumas funções enviam dados a serviços externos, apenas o necessário para responder ao pedido:</p>
