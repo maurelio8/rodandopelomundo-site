@@ -87,7 +87,7 @@
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 10 de novembro de 2026</p>
+    <p class="atualizado">Última atualização: 11 de novembro de 2026</p>
 
     <p>Esta política explica quais dados o aplicativo Rodando Pelo Mundo (RPM) usa, por que usa, onde eles ficam guardados e como você pode apagá-los. Ela vale também para a lista de espera do iPhone, no site (seção 9). Ela segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
     <p>O RPM é desenvolvido e mantido por Marcos Aurélio Luiz de Oliveira, pessoa física, que é o controlador dos seus dados pessoais: é quem decide como eles são tratados e responde por isso. Quando esta política diz "nós", está falando dele. Os dados de contato estão na seção 14.</p>
@@ -108,8 +108,8 @@
       <li>Motos cadastradas, abastecimentos, hodômetro, manutenções, pneus, custos e datas de vencimento de documentos (IPVA, licenciamento, seguro e CNH).</li>
       <li>Seu nome e foto de perfil, se você informar.</li>
       <li>Ficha de segurança e contato de emergência, se você preencher. A ficha pode ter dados de saúde, como o tipo sanguíneo, que a LGPD trata como sensíveis: ela é opcional, é usada no alerta de queda e você pode apagá-la quando quiser.</li>
-      <li>Leituras do acelerômetro durante os passeios, usadas na detecção de queda.</li>
-      <li>Um registro técnico do fim automático (quando a moto parou, por quanto tempo e por que o passeio foi encerrado), só com horários e durações, sem a sua posição, usado para corrigir falhas. Ele fica só no celular, fora do backup e da cópia entre aparelhos, e só sai dele se você mesmo enviar.</li>
+      <li>Resumos das leituras do acelerômetro durante os passeios (nunca as leituras brutas), usados na detecção de queda e para separar a moto andando de você caminhando: o app marca em cada ponto do passeio se ele foi a pé, para a caminhada ficar fora do resumo e o passeio terminar na chegada.</li>
+      <li>Um registro técnico do fim automático (quando a moto parou, por quanto tempo e por que o passeio foi encerrado), só com horários e durações, sem a sua posição, usado para corrigir falhas. E, só se você ligar o modo de diagnóstico do app, uma coleta técnica com números do acelerômetro e a velocidade a cada 5 segundos de passeio, também sem a sua posição. Os dois ficam só no celular, fora do backup e da cópia entre aparelhos, e só saem dele se você mesmo enviar.</li>
       <li>Eventos marcados como "Quero ir", oficinas salvas e suas preferências do app.</li>
     </ul>
     <p>Ao trocar de celular pelo assistente do Android que copia apps e dados, por cabo ou Wi-Fi, o banco de dados do app (seus passeios, motos e registros) vai junto, direto do aparelho antigo para o novo. Isso vale do Android 12 em diante; nas versões anteriores, os dados do app não são copiados. No celular novo, você entra de novo na conta Google, se usar, e permite de novo as permissões. O backup automático do próprio Android na nuvem fica desligado para o app: seus dados só vão para a nuvem pelo backup online do RPM, se você entrar com o Google (seção 4).</p>
@@ -133,7 +133,7 @@
     <p>Você pode negar ou retirar qualquer permissão nas configurações do celular. A função que depende dela deixa de funcionar, e o restante do app continua.</p>
 
     <h2>4. Conta Google e backup online (opcional)</h2>
-    <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Ele leva uma cópia de todos os dados da seção 2, inclusive os trajetos dos passeios, a ficha de segurança e o contato de emergência; só o registro técnico do fim automático fica de fora. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
+    <p>Se você escolher entrar com o Google, usamos o Firebase Authentication para identificar sua conta. Recebemos seu nome, e-mail e foto do perfil Google. O backup automático é salvo na área de dados do app dentro do seu Google Drive, que só o próprio app consegue ler. Ele leva uma cópia de todos os dados da seção 2, inclusive os trajetos dos passeios, a ficha de segurança e o contato de emergência; só o registro técnico do fim automático e a coleta do modo de diagnóstico ficam de fora. Guardamos as 5 cópias mais recentes, e o envio acontece pelo Wi-Fi, a menos que você libere os dados móveis.</p>
     <p id="uso-limitado">Usamos os dados que recebemos do Google (nome, e-mail, foto e o acesso à área de dados do app no seu Drive) apenas para o login e o backup descritos nesta seção. Não vendemos esses dados, não os usamos para publicidade e não os repassamos a ninguém. O uso e a transferência para qualquer outro app de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
 
     <h2>5. Serviços de terceiros</h2>
@@ -152,7 +152,7 @@
     <p>Se você ligar o alerta de queda, durante um passeio gravado o app analisa o acelerômetro e a velocidade. Se identificar uma possível queda, mostra uma contagem com alarme. Se você não tocar em "Estou bem", envia ao seu contato de emergência um SMS com seu nome, a hora, o link da sua localização e, se você ligar essa opção, os dados da ficha de segurança. A cobrança do SMS segue o plano da sua operadora. Quando o SMS não pode sair sozinho (sem a permissão, por exemplo), nenhuma mensagem é enviada: o app mostra uma tela com botões para ligar para o contato, mandar a mensagem já escrita ou ligar para o SAMU (192). Essa função é um apoio e não substitui os serviços de emergência.</p>
 
     <h2>7. Fim automático</h2>
-    <p>O passeio só começa quando você toca no botão ▶︎. O fim automático vem ligado e vale para todos os passeios: com a moto parada pelo tempo escolhido, o passeio é encerrado no último instante em que ela andou. Com o passeio pausado, ele nunca é encerrado sozinho. Para isso, o app usa só o GPS da própria gravação, sem nenhum outro sensor. Fora de um passeio, ele não observa nada.</p>
+    <p>O passeio só começa quando você toca no botão ▶︎. O fim automático vem ligado e vale para todos os passeios: com a moto parada pelo tempo escolhido, o passeio é encerrado no último instante em que ela andou. Com o passeio pausado, ele nunca é encerrado sozinho. Para perceber a moto parada, o app usa o GPS da própria gravação. Para achar o fim certo, usa também o acelerômetro durante o passeio: se você descer e andar com o celular no bolso, a caminhada fica de fora, e o passeio termina quando a moto parou. O mesmo vale quando você encerra pelo botão. Fora de um passeio, ele não observa nada.</p>
     <p>Quando o GPS demora a pegar no começo do passeio, numa garagem por exemplo, o app pode ligar o primeiro ponto do passeio ao lugar onde a moto estava estacionada: o fim do seu último passeio com ela ou a última posição que o celular tinha guardado antes de você tocar no ▶︎. Esse trecho aparece tracejado no mapa e é calculado no próprio celular.</p>
     <p>Nada disso é enviado a ninguém. Você pode desligar ou ajustar o fim automático quando quiser, em Perfil › ⚙ › Passeios.</p>
 
