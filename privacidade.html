@@ -85,7 +85,20 @@
      para o login e o escopo drive.appdata, sem nenhuma prática nova. Fica
      só aqui: o textoSobreConta da tela Sobre não precisa repeti-lo. Se o
      app passar a pedir outro escopo do Google, rever este parágrafo e a
-     tela Acesso a dados do Google Auth Platform. -->
+     tela Acesso a dados do Google Auth Platform.
+     Em 12/11 (card "Política e Seus dados: dados técnicos dos SDKs do
+     Google"), a seção 5 deixou de dizer que os serviços recebem "apenas o
+     necessário": os SDKs do Maps e da navegação coletam sozinhos dados
+     técnicos (modelo e sistema, IP, falhas no código deles, interações com o
+     mapa e um identificador próprio), e o Google Maps Platform (inclusive o
+     Weather) é controlador independente pelos termos dele. É o que o
+     formulário Segurança dos dados da Play declara (coletados e
+     compartilhados, finalidade Análise). A abertura da seção 5 e os itens do
+     Maps e do Weather são as mesmas frases de textoSobreDados e
+     itensSobreDados. Se um SDK do Google sair do app ou entrar outro, rever
+     a seção 5, o "Seus dados" e o formulário juntos. A seção 12 (idade)
+     ganhou, no mesmo dia, a frase de não coletar dados de menores (card
+     "Site: idade mínima de 18 anos"); fica só aqui e nos Termos. -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Política de privacidade</h1>
@@ -96,7 +109,7 @@
 
     <h2>1. O resumo</h2>
     <ul>
-      <li>Você pode usar o app sem criar conta. Nesse caso, tudo fica só no seu celular.</li>
+      <li>Você pode usar o app sem criar conta. Nesse caso, seus passeios e registros ficam só no seu celular.</li>
       <li>Se entrar com o Google, o backup é salvo numa pasta oculta do app no seu próprio Google Drive. Nós não temos acesso ao conteúdo desse backup.</li>
       <li>Não vendemos dados, não mostramos anúncios e não compartilhamos seus passeios com ninguém sem você mandar.</li>
       <li>Pelo site, só recebemos o e-mail de quem entra na lista de espera, que serve só para o aviso do lançamento, e o da conta Google de quem participa do grupo de testadores (seção 9).</li>
@@ -139,10 +152,10 @@
     <p id="uso-limitado">Usamos os dados que recebemos do Google (nome, e-mail, foto e o acesso à área de dados do app no seu Drive) apenas para o login e o backup descritos nesta seção. Não vendemos esses dados, não os usamos para publicidade e não os repassamos a ninguém. O uso e a transferência para qualquer outro app de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
 
     <h2>5. Serviços de terceiros</h2>
-    <p>Algumas funções enviam dados a serviços externos, apenas o necessário para responder ao pedido:</p>
+    <p>Algumas funções dependem de serviços externos. O app manda a cada um só o que a função precisa, mas alguns também coletam sozinhos dados técnicos do celular, como explica o item de cada um:</p>
     <ul>
-      <li>Google Maps Platform (mapas, rotas, navegação e locais próximos): recebe sua posição para mostrar o mapa, traçar e guiar a rota e buscar os lugares.</li>
-      <li>Google Weather (previsão do tempo): recebe só a posição arredondada, com precisão de cerca de 1 km, sem nenhum outro dado.</li>
+      <li>Google Maps Platform (mapas, rotas, navegação e locais próximos): recebe sua posição para mostrar o mapa, traçar e guiar a rota e buscar os lugares. As partes do Google que mostram o mapa e guiam a navegação dentro do app também coletam sozinhas dados técnicos: modelo e sistema do celular, endereço IP, falhas no código delas, como você usa o mapa e um identificador próprio delas, sem o seu nome nem a sua conta. O Google usa esses dados e a sua posição para prestar o serviço e também para melhorar os serviços dele, por conta própria, como controlador independente, pelos <a href="https://cloud.google.com/maps-platform/terms" rel="noopener">termos do Google Maps Platform</a>. Veja <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">como o Google usa as informações de apps que usam os serviços dele</a>.</li>
+      <li>Google Weather (previsão do tempo), também do Google Maps Platform: recebe só a posição arredondada, com precisão de cerca de 1 km, e o endereço IP da conexão, como em qualquer acesso à internet, sem nenhum outro dado seu. Como no item anterior, o Google trata esses dados por conta própria.</li>
       <li>GitHub Pages (GitHub), que hospeda os arquivos das camadas para motociclistas, do OpenStreetMap, como pedágios, postos, oficinas, borracharias e lombadas: o app baixa de uma vez os arquivos de todos os estados e mostra tudo a partir do celular, mesmo sem internet. Esse download não envia a sua posição; o GitHub recebe só o endereço IP da conexão, como em qualquer site.</li>
       <li>Sua operadora de celular: entrega o SMS do alerta de queda ao seu contato de emergência (seção 6).</li>
       <li>Google Firebase e Google Drive: login e backup online, se você entrar com o Google (seção 4).</li>
@@ -201,7 +214,7 @@
     <p>Veja como <a href="excluir-conta.html">excluir sua conta e seus dados</a>.</p>
 
     <h2>12. Idade mínima</h2>
-    <p>O app, a lista de espera e o grupo de testadores são destinados a maiores de 18 anos.</p>
+    <p>O app, a lista de espera e o grupo de testadores são destinados a maiores de 18 anos. Não coletamos de propósito dados de menores de 18 anos: se soubermos que recebemos dados de alguém com menos de 18, por exemplo na lista de espera, nós os apagamos.</p>
 
     <h2>13. Mudanças nesta política</h2>
     <p>Quando esta política mudar, a data no topo será atualizada e, se a mudança for importante, avisaremos no app. Se a mudança for no que fazemos com a lista de espera, avisaremos também por e-mail quem estiver nela.</p>
