@@ -63,8 +63,11 @@
      repositório rodandopelomundo-dados (dados.rodandopelomundo.com.br, no
      GitHub Pages), desde o card "Ler os arquivos no app no lugar do
      Overpass": o app baixa todos os estados, sem enviar a posição. A reserva do Google Agenda na web (seção 3) é do Android: no
-     iPhone, o Calendário da Apple sempre existe. O Crashlytics entra aqui pelo card
-     dele. A seção 9 (lista de espera do iPhone desde 09/11; Android e grupo
+     iPhone, o Calendário da Apple sempre existe. O Crashlytics (card
+     "Crashlytics") está no item #falhas da seção 5, com o prazo de 90 dias
+     também na seção 10; é a mesma frase do último item de itensSobreDados.
+     Nele o Google é OPERADOR (Firebase), diferente do Google Maps Platform.
+     A seção 9 (lista de espera do iPhone desde 09/11; Android e grupo
      dos testadores desde 12/11) é só do site: o app não coleta esses dados,
      por isso o "Seus dados" da tela Sobre não a repete. O formulário fica
      no index.html (painel #lista, com os links #android e #iphone e a data
@@ -159,6 +162,7 @@
       <li>GitHub Pages (GitHub), que hospeda os arquivos das camadas para motociclistas, do OpenStreetMap, como pedágios, postos, oficinas, borracharias e lombadas: o app baixa de uma vez os arquivos de todos os estados e mostra tudo a partir do celular, mesmo sem internet. Esse download não envia a sua posição; o GitHub recebe só o endereço IP da conexão, como em qualquer site.</li>
       <li>Sua operadora de celular: entrega o SMS do alerta de queda ao seu contato de emergência (seção 6).</li>
       <li>Google Firebase e Google Drive: login e backup online, se você entrar com o Google (seção 4).</li>
+      <li id="falhas">Firebase Crashlytics (Google), para corrigir falhas do app: quando o app trava ou dá erro, envia um relatório técnico com o trecho do código que falhou, o modelo e o sistema do celular, a versão do app, o estado do aparelho naquele momento (como a memória livre e a orientação da tela) e identificadores da instalação do app, sem o seu nome nem a sua conta. O app não coloca nele a sua posição nem os seus registros, só se havia um passeio sendo gravado. O Google guarda o relatório por 90 dias, em nosso nome (como operador), só para corrigirmos as falhas.</li>
       <li>Google Planilhas, Apps Script e Gmail: recebem e guardam a lista de espera do site e enviam o e-mail de confirmação (seção 9).</li>
       <li>Grupos do Google e Google Play: guardam o grupo de testadores e liberam o teste fechado do app no Android (seção 9).</li>
     </ul>
@@ -206,7 +210,7 @@
     <p>O grupo pode continuar depois do lançamento, para testar versões novas antes de todo mundo. Para sair, use a opção Sair do grupo no próprio Grupos do Google, ou escreva para <a href="mailto:approdandopelomundo@gmail.com?subject=Sair%20do%20grupo%20de%20testadores">approdandopelomundo@gmail.com</a> com o assunto "Sair do grupo de testadores", e tiramos você em até 15 dias. Sair do grupo não apaga o app do seu celular nem os seus dados nele.</p>
 
     <h2>10. Por quanto tempo guardamos</h2>
-    <p>Os dados ficam no seu celular até você apagá-los ou desinstalar o app. O backup online fica no seu Google Drive até você excluir a conta no app ou apagar os dados do app no Drive. Os prazos da lista de espera e do grupo de testadores estão na seção 9.</p>
+    <p>Os dados ficam no seu celular até você apagá-los ou desinstalar o app. O backup online fica no seu Google Drive até você excluir a conta no app ou apagar os dados do app no Drive. Os relatórios de falhas (seção 5) ficam 90 dias no Firebase Crashlytics, e depois o Google começa a apagá-los. Os prazos da lista de espera e do grupo de testadores estão na seção 9.</p>
 
     <h2>11. Seus direitos</h2>
     <p>Pela LGPD, você pode confirmar quais dados existem, acessá-los, corrigi-los, levá-los para outro serviço e pedir que sejam apagados. A maior parte disso você faz no próprio app. Para qualquer pedido, escreva para o e-mail abaixo.</p>
