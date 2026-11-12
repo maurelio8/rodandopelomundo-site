@@ -79,7 +79,7 @@
           <a class="botao" href="#baixar">Quero usar</a>
           <a class="botao contorno" href="#be-off">O que é o Be Off</a>
         </div>
-        <p class="selo-plataforma">Chega primeiro ao Android. Tem iPhone? <a href="#iphone">Entre na lista de espera</a>.</p>
+        <p class="selo-plataforma">Chega primeiro ao Android: <a href="#android">teste antes do lançamento</a>. Tem iPhone? <a href="#iphone">Entre na lista de espera</a>.</p>
       </div>
 
       <!-- Um pedaço da tela Início do app, com números de exemplo -->
@@ -416,6 +416,7 @@
         <details><summary>Preciso mexer no celular enquanto piloto?</summary><p>Não, e não deve. Você toca no ▶︎ antes de sair, o passeio termina sozinho quando você chega, e funções como pesquisar um destino só abrem com a moto parada.</p></details>
         <details><summary>O passeio começa e termina sozinho?</summary><p>Termina, sim: com a moto parada por alguns minutos, o RPM encerra o passeio (dá para ajustar o tempo ou desligar). O fim fica na chegada: se você descer e andar com o celular no bolso, a caminhada não entra no passeio. Numa parada longa, como o almoço numa viagem, é só pausar: pausado, ele não encerra. Começar é sempre pelo ▶︎, de propósito: o RPM só usa o GPS em segundo plano enquanto grava, e um trajeto de carro, ônibus ou Uber não vira passeio por engano.</p></details>
         <details><summary>Dá para usar com o Waze ou o Google Maps?</summary><p>Dá. O RPM tem navegação própria, no modo moto e com o passeio gravando junto. Se preferir o Waze ou o Google Maps, comece o passeio no ▶︎ e abra a rota no navegador que você já usa: a gravação continua no RPM.</p></details>
+        <details><summary>Dá para usar antes do lançamento?</summary><p>No Android, sim: o RPM está em teste fechado na Google Play. Entre no grupo de testadores com a mesma conta Google da Play Store do seu celular e aceite o convite, como mostra o <a href="#android">passo a passo</a>. Quem entra no teste usa o app de verdade e ajuda a acertar o que falta antes do lançamento.</p></details>
         <details><summary>Tem para iPhone?</summary><p>Ainda não. O RPM chega primeiro ao Android, e a versão para iPhone não tem data. Deixe seu e-mail na <a href="#iphone">lista de espera</a>: o tamanho da lista ajuda a decidir quando ela sai, e você recebe o aviso quando o app chegar à App Store.</p></details>
         <details><summary>Como apago minha conta e meus dados?</summary><p>Pelo próprio app, em Configurações, ou seguindo os passos da página <a href="excluir-conta.html">Excluir conta e dados</a>.</p></details>
       </div>
@@ -430,50 +431,85 @@
         <p class="t70">O app está na reta final de testes na estrada.</p>
         <!-- Quando publicar, troque cada bloco pelo selo oficial da loja com o link -->
         <div class="lojas">
-          <div class="loja">
+          <a class="loja" href="#android">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>
-            <div><strong>Google Play</strong><small>Em breve</small></div>
-          </div>
+            <div><strong>Google Play</strong><small>Teste antes do lançamento</small></div>
+          </a>
           <a class="loja" href="#iphone">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>
             <div><strong>App Store</strong><small>Lista de espera aberta</small></div>
           </a>
         </div>
-        <div><a class="botao" href="mailto:approdandopelomundo@gmail.com?subject=Quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20RPM%20no%20Android">Me avise no lançamento para Android</a></div>
 
-        <!-- ======== Lista de espera do iPhone ========
-             Mede a procura antes de pagar a conta Apple. O formulário manda
-             os campos para o Apps Script da planilha da conta do app
-             (data-endereco, a URL que termina em /exec); o código do script
-             está em _ferramentas/lista_espera_iphone.gs.
+        <!-- ======== Teste e lista de espera do lançamento ========
+             Um painel só, com a escolha Android ou iPhone. Os links #android
+             e #iphone (o #iphone já circula no Instagram) abrem o painel com
+             a plataforma marcada; sem o link, o site escolhe pelo celular de
+             quem abre (iPhone ou iPad = iPhone; o resto = Android).
+             - Android: o caminho principal é o teste fechado (grupo dos
+               testadores + convite da Play). O formulário fica para quem só
+               quer o aviso do lançamento. O e-mail da planilha não coloca
+               ninguém no teste: só a conta Google que participa do grupo.
+             - iPhone: a lista de espera, com o "testar antes" do TestFlight.
+             - data-so="android" ou "iphone": só aparece com aquela escolha
+               (o site.js troca o atributo hidden).
+             O formulário manda os campos para o Apps Script da planilha da
+             conta do app (data-endereco, a URL que termina em /exec); o código
+             está em _ferramentas/lista_espera.gs, com os mesmos links do
+             grupo e do convite.
              - "aviso": data deste texto. Mudou o texto ou o que a lista
                guarda? Troque a data e confira a seção 9 da política.
              - "site": isca para robôs, escondida de quem enxerga e de quem
                usa leitor de tela. Gente de verdade nunca preenche.
              - As opções de "Como conheceu o RPM?" precisam ser iguais às
-               ORIGENS_ACEITAS do script. -->
-        <div class="lista-iphone" id="iphone">
+               ORIGENS_ACEITAS do script.
+             Quando o app sair na Google Play: o bloco Google Play vira o selo
+             da loja com o link, o Android sai deste painel e a lista do
+             Android é apagada depois do aviso (card próprio no Quadro). -->
+        <div class="lista-espera" id="lista">
+          <span class="ancora" id="android"></span><span class="ancora" id="iphone"></span>
           <div class="lista-cabeca">
             <span class="espia azul"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span>
-            <h3>Tem iPhone?</h3>
+            <h3 id="titulo-lista">Qual é o seu celular?</h3>
           </div>
 
-          <form class="form-lista" id="form-iphone" data-endereco="https://script.google.com/macros/s/AKfycbw3Yyo87O3nAnqudIPvLOa5FSrWoTQSFWmM2VXc9qmTv5mCN1lKg5ffXnjwA4qi3HdW6Q/exec">
-            <p>A versão para iPhone ainda não tem data. Deixe seu e-mail: avisamos quando o RPM chegar à App Store, e o tamanho desta lista ajuda a decidir quando isso acontece.</p>
+          <div class="escolha-plataforma" role="radiogroup" aria-labelledby="titulo-lista">
+            <label><input type="radio" name="plataforma" value="android" checked><span>Android</span></label>
+            <label><input type="radio" name="plataforma" value="iphone"><span>iPhone</span></label>
+          </div>
 
-            <input type="hidden" name="aviso" value="2026-11-09">
+          <div class="teste-android" data-so="android">
+            <p>O RPM está em teste fechado na Google Play. Quer usar antes do lançamento?</p>
+            <ol class="passos-teste">
+              <li>
+                <p>Entre no grupo de testadores com a <strong>mesma conta Google da Play Store</strong> do seu celular.</p>
+                <a class="botao" href="https://groups.google.com/g/rpm-testadores" target="_blank" rel="noopener">Entrar no grupo</a>
+              </li>
+              <li>
+                <p>Aceite o convite do teste e instale o RPM pela Play Store.</p>
+                <a class="botao contorno" href="https://play.google.com/apps/testing/br.com.rodandopelomundo.app" target="_blank" rel="noopener">Aceitar o convite</a>
+              </li>
+            </ol>
+            <p class="aviso-lista">Se o convite disser que o teste não está disponível, ele ainda não abriu: o aviso chega pelo grupo. Fique inscrito até o lançamento: a Google Play só libera o app para todos depois de duas semanas de teste. Como usamos os dados do grupo está na <a href="privacidade.html#testadores">política de privacidade</a>.</p>
+          </div>
+
+          <form class="form-lista" id="form-lista" data-endereco="https://script.google.com/macros/s/AKfycbw3Yyo87O3nAnqudIPvLOa5FSrWoTQSFWmM2VXc9qmTv5mCN1lKg5ffXnjwA4qi3HdW6Q/exec">
+            <p data-so="android"><strong>Prefere só esperar o lançamento?</strong> Deixe seu e-mail: avisamos quando o RPM for liberado para todos na Google Play.</p>
+            <p data-so="iphone" hidden>A versão para iPhone ainda não tem data. Deixe seu e-mail: avisamos quando o RPM chegar à App Store, e o tamanho desta lista ajuda a decidir quando isso acontece.</p>
+
+            <input type="hidden" name="aviso" value="2026-11-12">
             <div class="isca" aria-hidden="true">
               <label>Não preencha este campo <input type="text" name="site" tabindex="-1" autocomplete="off"></label>
             </div>
 
-            <label class="so-leitor" for="email-iphone">Seu e-mail</label>
+            <label class="so-leitor" for="email-lista">Seu e-mail</label>
             <div class="campo-email">
-              <input id="email-iphone" type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="Seu e-mail">
+              <input id="email-lista" type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="Seu e-mail">
               <button class="botao" type="submit">Entrar na lista</button>
             </div>
 
             <div class="opcoes-lista">
-              <label class="marcar"><input type="checkbox" name="testar" value="sim"> Quero testar antes do lançamento (TestFlight)</label>
+              <label class="marcar" data-so="iphone" hidden><input type="checkbox" name="testar" value="sim" disabled> Quero testar antes do lançamento (TestFlight)</label>
               <label class="escolher">
                 <span>Como conheceu o RPM? <span class="opcional">(opcional)</span></span>
                 <select name="origem">
@@ -489,18 +525,19 @@
               </label>
             </div>
 
-            <p class="aviso-lista">Usamos seu e-mail só para o aviso do lançamento no iPhone e, se você marcar, para o convite de teste. Para sair, responda ao e-mail de confirmação com "sair". Detalhes na <a href="privacidade.html#lista-iphone">política de privacidade</a>.</p>
-            <p class="estado-lista" id="estado-iphone" role="status"></p>
+            <p class="aviso-lista" data-so="android">Usamos seu e-mail só para o aviso do lançamento na Google Play, e a lista do Android é apagada logo depois. Para sair antes, responda ao e-mail de confirmação com "sair". Detalhes na <a href="privacidade.html#lista-espera">política de privacidade</a>.</p>
+            <p class="aviso-lista" data-so="iphone" hidden>Usamos seu e-mail só para o aviso do lançamento no iPhone e, se você marcar, para o convite de teste. Para sair, responda ao e-mail de confirmação com "sair". Detalhes na <a href="privacidade.html#lista-espera">política de privacidade</a>.</p>
+            <p class="estado-lista" id="estado-lista" role="status"></p>
           </form>
 
-          <div class="lista-pronta" id="iphone-pronto" tabindex="-1" hidden>
+          <div class="lista-pronta" id="lista-pronta" tabindex="-1" hidden>
             <p class="lista-pronta-titulo">Você está na lista.</p>
-            <p>Vamos avisar <strong id="iphone-email-pronto"></strong> quando o RPM chegar ao iPhone. A confirmação chega em alguns minutos; se não aparecer, olhe o spam. Se você já estava na lista, ela não vem de novo.</p>
-            <div><button class="botao contorno" type="button" id="iphone-outro">Usar outro e-mail</button></div>
+            <p>Vamos avisar <strong id="lista-email-pronto"></strong> <span data-so="android">quando o RPM for liberado para todos na Google Play</span><span data-so="iphone" hidden>quando o RPM chegar ao iPhone</span>. A confirmação chega em alguns minutos; se não aparecer, olhe o spam. Se você já estava na lista, ela não vem de novo.</p>
+            <div><button class="botao contorno" type="button" id="lista-outro">Usar outro e-mail</button></div>
           </div>
         </div>
 
-        <p class="t70">Os bastidores da reta final e a chamada para quem quiser testar antes do lançamento saem no Instagram do app, <a href="https://www.instagram.com/app.rodandopelomundo/" target="_blank" rel="noopener">@app.rodandopelomundo</a>.</p>
+        <p class="t70">Os bastidores da reta final saem no Instagram do app, <a href="https://www.instagram.com/app.rodandopelomundo/" target="_blank" rel="noopener">@app.rodandopelomundo</a>.</p>
         <p class="t70">Enquanto isso, pratique o Be Off: pegue a estrada e, depois do passeio, mostre por onde andou com #BeOffRPM.</p>
       </div>
     </div>
