@@ -54,7 +54,18 @@
   </div>
 </header>
 
-<!-- Esta é a URL a informar na Play Console, em "Exclusão de dados". -->
+<!-- Esta é a URL a informar na Play Console, em "Exclusão de dados".
+     Conferida em 12/11 com o app: os nomes do caminho e dos botões de "Pelo
+     app" vêm de lib/telas/tela_perfil.dart (seção Conta),
+     lib/telas/cartao_conta.dart e lib/nuvem/textos_conta.dart; o que é
+     apagado e em que ordem, de lib/nuvem/exclusao_conta.dart. Ao mudar um,
+     mudar o outro.
+     Pelo e-mail, só dá para apagar o cadastro de login (Firebase
+     Authentication, no console do projeto). Os backups ficam no Drive da
+     própria pessoa, onde não temos acesso, por isso o passo do Drive em "Sem
+     o app" é dela, e vem antes de tirar o acesso do app à conta Google: sem
+     o acesso, o app pode sumir do Gerenciar apps do Drive com os dados ainda
+     lá. -->
 <main class="documento">
   <div class="envoltorio"><div class="folha">
     <h1>Excluir conta e dados</h1>
@@ -63,24 +74,31 @@
     <h2>Pelo app</h2>
     <ol>
       <li>Abra o Rodando Pelo Mundo e toque em Perfil.</li>
-      <li>Toque na engrenagem para abrir as Configurações.</li>
-      <li>Em Conta, toque em Excluir conta e confirme.</li>
+      <li>Toque na engrenagem para abrir as Configurações e escolha Conta.</li>
+      <li>Toque em Excluir conta e backups online, marque "Entendo que os backups online serão apagados para sempre" e toque em Excluir.</li>
+      <li>Se o app pedir, escolha de novo a mesma conta Google. O Google exige um login recente para excluir uma conta.</li>
     </ol>
-    <p>Para apagar também os dados guardados no celular, desinstale o app ou limpe os dados dele nas configurações do Android.</p>
+    <p>A exclusão precisa de internet e não pode ser feita com um passeio sendo gravado. A opção só aparece com a conta Google conectada: se você saiu da conta, entre de novo com a mesma conta para ver a opção.</p>
+    <p>Para apagar também os dados guardados no celular, desinstale o app ou limpe os dados dele em Configurações do Android, Apps, Rodando Pelo Mundo, Armazenamento.</p>
 
     <h2>Sem o app</h2>
-    <p>Se você não tem mais o app instalado, envie um e-mail para <a href="mailto:approdandopelomundo@gmail.com?subject=Excluir%20minha%20conta">approdandopelomundo@gmail.com</a> com o assunto "Excluir minha conta", a partir do e-mail da conta Google que você usou no app. Respondemos em até 15 dias.</p>
-    <p>Você também pode apagar o backup diretamente no Google Drive: no site do Drive, abra Configurações, depois Gerenciar apps, encontre o Rodando Pelo Mundo e escolha Excluir dados ocultos do app.</p>
+    <p>Se você não tem mais o app instalado, siga os três passos, nesta ordem. Os dois primeiros você faz sozinho, na hora. O terceiro é um pedido por e-mail.</p>
+    <ol>
+      <li><strong>Apague os backups.</strong> Entre no <a href="https://drive.google.com" rel="noopener">Google Drive</a> pelo navegador, com a mesma conta Google que você usou no app. No celular, ative a versão para computador do navegador, porque o app do Drive não tem essa opção. Abra Configurações, depois Gerenciar apps, encontre o Rodando Pelo Mundo, toque em Opções e escolha Excluir dados ocultos do app. Os backups ficam no seu Drive e nós não temos acesso a eles, por isso só você consegue apagá-los sem o app.</li>
+      <li><strong>Tire o acesso do app à sua conta Google.</strong> Abra <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>, toque em Rodando Pelo Mundo e exclua as conexões com o app.</li>
+      <li><strong>Peça a exclusão do cadastro.</strong> Envie um e-mail para <a href="mailto:approdandopelomundo@gmail.com?subject=Excluir%20minha%20conta">approdandopelomundo@gmail.com</a> com o assunto "Excluir minha conta", a partir do e-mail da conta Google que você usou no app. Excluímos o seu cadastro de login e respondemos confirmando em até 15 dias.</li>
+    </ol>
 
     <h2>O que é apagado</h2>
     <ul>
-      <li>O vínculo da sua conta Google com o app.</li>
-      <li>Todos os backups online guardados no seu Google Drive.</li>
+      <li>O seu cadastro de login no app: o identificador, o nome, o e-mail e a foto da sua conta Google.</li>
+      <li>Todos os backups online guardados na pasta oculta do app no seu Google Drive.</li>
+      <li>O acesso do app à sua conta Google, tanto o do login quanto o da pasta do Drive.</li>
     </ul>
 
     <h2>O que não é apagado automaticamente</h2>
     <ul>
-      <li>Os dados no seu celular continuam lá até você desinstalar o app ou limpar os dados dele.</li>
+      <li>Os dados no seu celular continuam lá até você desinstalar o app ou limpar os dados dele. O app segue funcionando sem conta, com esses dados.</li>
       <li>Arquivos de backup manual que você salvou fora do app, que ficam sob seu controle.</li>
     </ul>
     <p>Não mantemos cópias dos seus passeios ou registros em servidores próprios.</p>
