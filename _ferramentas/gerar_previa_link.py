@@ -8,7 +8,9 @@ Como usar (na pasta do site):
     pip install --user pillow fonttools brotli
     python3 _ferramentas/gerar_previa_link.py
 
-O resultado sai em assets/img/previa-link-v1.jpg (1200 x 630 px).
+O resultado sai em assets/img/previa-link-v2.jpg (1200 x 630 px).
+v2 (19/11/2026): print da Garagem refeito com a moto de demonstração
+(Dyna Super Glide), sem o defeito "3185 dias" do cartão Oficina.
 
 Regras da arte:
 - 1200 x 630 px (proporção 1,91:1), o tamanho que o WhatsApp mostra grande;
@@ -45,7 +47,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 PASTA_SITE = Path(__file__).resolve().parent.parent
 PASTA_FONTES = PASTA_SITE / "assets" / "fonts"
 PASTA_TELAS = PASTA_SITE / "assets" / "img" / "telas"
-ARQUIVO_SAIDA = PASTA_SITE / "assets" / "img" / "previa-link-v1.jpg"
+ARQUIVO_SAIDA = PASTA_SITE / "assets" / "img" / "previa-link-v2.jpg"
 
 LARGURA, ALTURA = 1200, 630
 
